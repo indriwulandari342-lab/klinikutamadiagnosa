@@ -1,0 +1,734 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>Klinik Utama Diagnosa</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="logo atas.png">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+
+  <!-- Google Fonts (pakai Nunito 400 & 700 supaya bold jalan) -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@700;900&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Nunito', sans-serif;
+    }
+  </style>
+  <style>
+    /* Promo Spesial - gaya Latin */
+    .promo-text {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;       /* agak besar biar anggun */
+      font-weight: 400;      /* font ini udah tebal alami */
+      background: linear-gradient(to right, #16a34a, #86efac);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Medical Check Up Jantung - bold, outline putih */
+     .title-text {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 900;
+      color: #16a34a; /* hijau utama */
+      -webkit-text-stroke: 2px #ffffff; /* outline putih */
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.25); /* biar lebih tegas */
+    }
+  </style>
+</head>
+
+<body class="bg-green-100 text-gray-900">
+
+  <!-- Tombol WhatsApp -->
+  <a href="https://wa.me/6282130471300?text=Halo%20saya%20butuh%20informasi" 
+     target="_blank"
+     class="fixed bottom-4 right-4 bg-green-600 text-white p-4 rounded-full shadow-lg hover:bg-green-700 transition transform hover:scale-110 z-50">
+    <i class="fab fa-whatsapp text-3xl"></i>
+  </a>
+
+  <!-- Header / Navbar -->
+  <header class="shadow-md sticky top-0 bg-green-200 z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-4 py-3">
+      
+      <!-- Logo -->
+      <a class="flex items-center space-x-3 flex-shrink-0" href="#">
+        <img alt="Medicare logo" class="w-80 md:w-100 h-auto" src="navbar-removebg.png"/>
+      </a>
+
+      <!-- Desktop Navbar -->
+      <nav>
+        <ul class="hidden md:flex space-x-8 text-green-900 relative font-bold">
+          <li><a class="hover:text-green-700 transition" href="index.html">Home</a></li>
+          <li><a class="hover:text-green-700 transition" href="Layanankami.html">Tentang Kami</a></li>
+          <li><a class="hover:text-green-700 transition" href="promo.html">Promo</a></li>
+          <li class="relative">
+            <button aria-haspopup="true" aria-expanded="false" id="services-btn" 
+              class="flex items-center space-x-1 hover:text-green-700 transition focus:outline-none font-bold">
+              <span>Pelayanan</span>
+              <i class="fas fa-chevron-down text-sm"></i>
+            </button>
+            <ul aria-label="submenu" 
+                class="absolute left-0 top-full mt-1 w-56 bg-green-200 border border-green-400 rounded-md shadow-lg opacity-0 invisible transition-all duration-300 z-50 origin-top scale-95">
+              <li><a class="block px-4 py-2 hover:bg-green-300 text-green-900 font-bold" href="#">Radiologi</a></li>
+              <li><a class="block px-4 py-2 hover:bg-green-300 text-green-900 font-bold" href="#">Electrocardiography [EKG]</a></li>
+              <li><a class="block px-4 py-2 hover:bg-green-300 text-green-900 font-bold" href="#">Ultrasonography [USG]</a></li>
+              <li><a class="block px-4 py-2 hover:bg-green-300 text-green-900 font-bold" href="#">Audiometri</a></li>
+              <li><a class="block px-4 py-2 hover:bg-green-300 text-green-900 font-bold" href="#">Spirometri</a></li>
+              <li><a class="block px-4 py-2 hover:bg-green-300 text-green-900 font-bold" href="#">Medical Check Up [MCU]</a></li>
+              <li><a class="block px-4 py-2 hover:bg-green-300 text-green-900 font-bold" href="#">Laboratorium Patalogi Klinik</a></li>
+              <li><a class="block px-4 py-2 hover:bg-green-300 text-green-900 font-bold" href="#">Laboratorium Patalogi Anatomi</a></li>
+              <li><a class="block px-4 py-2 hover:bg-green-300 text-green-900 font-bold" href="#">Treadmill</a></li>
+            </ul>
+          </li>
+          <li><a class="hover:text-green-700 transition" href="#">Hubungi Kami</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Button -->
+      <div class="md:hidden flex items-center">
+        <button aria-label="Toggle menu" class="text-green-900 focus:outline-none" id="menu-btn">
+          <i class="fas fa-bars fa-2x"></i> 
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="hidden bg-green-200 shadow-md" id="mobile-menu">
+      <ul class="flex flex-col space-y-2 px-4 py-4 font-bold text-green-900">
+        <li><a class="block hover:text-green-700 transition" href="index.html">Home</a></li>
+        <li><a class="block hover:text-green-700 transition" href="Layanankami.html">Tentang Kami</a></li>
+       <li><a class="block hover:text-green-700 transition" href="">Promo</a></li>
+        <li>
+          <button aria-haspopup="true" aria-expanded="false" id="mobile-services-btn" 
+            class="w-full flex justify-between items-center px-2 py-2 font-bold hover:text-green-700 focus:outline-none">
+            <span>Pelayanan</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <ul aria-label="submenu" 
+              class="hidden flex-col pl-6 mt-1 space-y-1 text-green-900 font-bold" 
+              id="mobile-services-menu">
+            <li><a class="block hover:text-green-700 transition" href="#">Radiologi</a></li>
+            <li><a class="block hover:text-green-700 transition" href="#">Electrocardiography [EKG]</a></li>
+            <li><a class="block hover:text-green-700 transition" href="#">Ultrasonography [USG]</a></li>
+            <li><a class="block hover:text-green-700 transition" href="#">Audiometri</a></li>
+            <li><a class="block hover:text-green-700 transition" href="#">Spirometri</a></li>
+            <li><a class="block hover:text-green-700 transition" href="#">Medical Check Up [MCU]</a></li>
+            <li><a class="block hover:text-green-700 transition" href="#">Laboratorium Patalogi Klinik</a></li>
+            <li><a class="block hover:text-green-700 transition" href="#">Laboratorium Patalogi Anatomi</a></li>
+            <li><a class="block hover:text-green-700 transition" href="#">Treadmill</a></li>
+          </ul>
+        </li>
+        <li><a class="block hover:text-green-700 transition" href="#">Hubungi Kami</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Script menu dropdown -->
+  <script>
+    constmenuBtn = document.getElementById("menu-btn");
+    constmobileMenu = document.getElementById("mobile-menu");
+    constmobileServicesBtn = document.getElementById("mobile-services-btn");
+    constmobileServicesMenu = document.getElementById("mobile-services-menu");
+
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    mobileServicesBtn.addEventListener("click", () => {
+      mobileServicesMenu.classList.toggle("hidden");
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+  <!-- Hero Section -->
+  <section class="relative bg-green-100">
+   <div class="max-w-7xl mx-auto px-4 py-20 flex flex-col md:flex-row items-center md:items-start">
+    <div class="md:w-1/2 space-y-6">
+    <h1 class="text-5xl font-bold text-green-900 " style="font-family: 'poppins'; ">
+    Kesehatan Adalah Aset Berharga
+  </h1>
+     <p class="text-green-900 text-lg max-w-xl animate-fadeIn delay-200">
+Bersama Klinik Utama Diagnosa, wujudkan hidup sehat dan berkualitas. Didukung dokter ahli, perawat profesional, serta fasilitas lengkap, kami berkomitmen untuk selalu memberikan layanan medis yang aman, nyaman, dan terpercaya.     </p>
+     <div class="flex space-x-4 animate-fadeIn delay-400">
+      <a class="bg-green-800 hover:bg-green-900 text-white px-6 py-3 rounded-md font-semibold transition transform hover:scale-105" href="#form-daftar">
+       Daftar Online
+      </a>
+     </div>
+    </div>
+    <div class="md:w-1/2 mt-10 md:mt-0 flex justify-center animate-fadeIn delay-600 relative w-full max-w-[600px] h-[400px]">
+     <img alt="A friendly doctor consulting with a patient in a modern clinic room with medical equipment" class="rounded-lg shadow-lg max-w-full h-auto absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-1000" id="hero-image" src="icon2 (2).png" width="600" height="400"/>
+ </div>
+   </div>
+  </section>
+  <!-- Services Section -->
+  <head>
+  <!-- Tambah font cantik dari Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Raleway:wght@800&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+
+<section class="max-w-7xl mx-auto px-4 py-20 bg-white">
+  <section id="layanan" class="mt-20"></section>
+  
+  <!-- Judul -->
+  <div class="flex justify-center">
+  <h2 class="text-4xl font-extrabold text-green-900 mb-16 relative text-center"
+      style="font-family: 'Raleway', sans-serif;"
+      data-aos="fade-up">
+    PELAYANAN KAMI
+    <span class="block w-24 h-1 bg-gradient-to-r from-green-700 to-green-400 mx-auto mt-3 rounded-full"></span>
+  </h2>
+</div>
+
+
+  <div class="grid md:grid-cols-3 gap-8">
+
+    <div class="bg-green-200 rounded-lg shadow-md p-6 text-center hover:shadow-xl transition transform hover:-translate-y-2 hover:scale-105 duration-300">
+    <img src="radiologi.jpg" alt="Radiologi" class="mx-auto mb-4 w-28 h-28 object-cover shadow-md border border-green-500"/>
+    <h3 class="text-xl font-bold text-green-900 mb-2" style="font-family: 'Raleway', sans-serif;">
+      Radiologi
+    </h3>
+    <p class="text-gray-700 leading-relaxed" style="font-family: 'Open Sans', sans-serif;">
+      Radiologi adalah layanan pemeriksaan medis menggunakan teknologi pencitraan seperti rontgen, USG, CT Scan, dan MRI.
+    </p>
+  </div>
+
+    <div class="bg-green-200 rounded-lg shadow-md p-6 text-center hover:shadow-xl transition transform hover:-translate-y-2 hover:scale-105 duration-300">
+    <img src="ekg.jpg" alt="EKG" class="mx-auto mb-4 w-28 h-28 object-cover shadow-md border border-green-500"/>
+    <h3 class="text-xl font-bold text-green-900 mb-2" style="font-family: 'Raleway', sans-serif;">
+      Electrocardiography [EKG]
+    </h3>
+    <p class="text-gray-700 leading-relaxed" style="font-family: 'Open Sans', sans-serif;">
+      Electrocardiography (EKG) adalah pemeriksaan medis yang merekam aktivitas listrik jantung.
+    </p>
+  </div>
+
+    <div class="bg-green-200 rounded-lg shadow-md p-6 text-center hover:shadow-xl transition transform hover:-translate-y-2 hover:scale-105 duration-300">
+    <img src="usg.jpg" alt="USG" class="mx-auto mb-4 w-28 h-28 object-cover shadow-md border border-green-500"/>
+    <h3 class="text-xl font-bold text-green-900 mb-2" style="font-family: 'Raleway', sans-serif;">
+      Ultrasonography [USG]
+    </h3>
+    <p class="text-gray-700 leading-relaxed" style="font-family: 'Open Sans', sans-serif;">
+      Ultrasonography (USG) adalah pemeriksaan medis menggunakan gelombang suara berfrekuensi tinggi untuk menghasilkan gambar organ dalam tubuh.
+    </p>
+  </div>
+    <div class="bg-green-200 rounded-lg shadow-md p-6 text-center hover:shadow-xl transition transform hover:-translate-y-2 hover:scale-105 duration-300">
+    <img src="audio.jpg" alt="Audiometri" class="mx-auto mb-4 w-28 h-28 object-cover shadow-md border border-green-500"/>
+    <h3 class="text-xl font-bold text-green-900 mb-2" style="font-family: 'Raleway', sans-serif;">
+      Audiometri
+    </h3>
+    <p class="text-green-700 leading-relaxed">
+      Audiometri adalah pemeriksaan untuk mengukur kemampuan pendengaran seseorang.
+    </p>
+  </div>
+    <div class="bg-green-200 rounded-lg shadow-md p-6 text-center hover:shadow-xl transition transform hover:-translate-y-2 hover:scale-105 duration-300">
+    <img src="spiro.jpg" alt="Spirometri" class="mx-auto mb-4 w-28 h-28 object-cover shadow-md border border-green-500"/>
+    <h3 class="text-xl font-bold text-green-900 mb-2" style="font-family: 'Raleway', sans-serif;">
+      Spirometri
+    </h3>
+    <p class="text-green-700 leading-relaxed">
+      Spirometri adalah pemeriksaan fungsi paru-paru yang mengukur kapasitas dan aliran udara saat bernapas.
+    </p>
+  </div>
+
+  <!-- Card 3 -->
+    <div class="bg-green-200 rounded-lg shadow-md p-6 text-center hover:shadow-xl transition transform hover:-translate-y-2 hover:scale-105 duration-300">
+    <img src="mcu.jpg" alt="Medical Check Up" class="mx-auto mb-4 w-28 h-28 object-cover shadow-md border border-green-500"/>
+    <h3 class="text-xl font-bold text-green-900 mb-2" style="font-family: 'Raleway', sans-serif;">
+      Medical Check Up [MCU]
+    </h3>
+    <p class="text-green-700 leading-relaxed">
+      Pemeriksaan kesehatan menyeluruh untuk mendeteksi kondisi medis sejak dini.
+    </p>
+  </div>
+
+  <!-- Card 4 -->
+    <div class="bg-green-200 rounded-lg shadow-md p-6 text-center hover:shadow-xl transition transform hover:-translate-y-2 hover:scale-105 duration-300">
+    <img src="patalogi 2.png" alt="Laboratorium Patologi Klinik" class="mx-auto mb-4 w-28 h-28 object-cover shadow-md border border-green-500"/>
+    <h3 class="text-xl font-bold text-green-900 mb-2" style="font-family: 'Raleway', sans-serif;">
+      Laboratorium Patologi Klinik
+    </h3>
+    <p class="text-green-700 leading-relaxed">
+      Pemeriksaan sampel tubuh seperti darah, urine, atau cairan lainnya.
+    </p>
+  </div>
+
+  <!-- Card 5 -->
+    <div class="bg-green-200 rounded-lg shadow-md p-6 text-center hover:shadow-xl transition transform hover:-translate-y-2 hover:scale-105 duration-300">
+    <img src="anatomi.jpg" alt="Laboratorium Patologi Anatomi" class="mx-auto mb-4 w-28 h-28 object-cover shadow-md border border-green-500"/>
+    <h3 class="text-xl font-bold text-green-900 mb-2" style="font-family: 'Raleway', sans-serif;">
+      Laboratorium Patologi Anatomi
+    </h3>
+    <p class="text-green-700 leading-relaxed">
+      Pemeriksaan jaringan tubuh (biopsi, sitologi, atau operasi).
+    </p>
+  </div>
+
+  <!-- Card 6 -->
+    <div class="bg-green-200 rounded-lg shadow-md p-6 text-center hover:shadow-xl transition transform hover:-translate-y-2 hover:scale-105 duration-300">
+    <img src="treadmill.jpg" alt="Treadmill" class="mx-auto mb-4 w-28 h-28 object-cover shadow-md border border-green-500"/>
+    <h3 class="text-xl font-bold text-green-900 mb-2" style="font-family: 'Raleway', sans-serif;">
+      Treadmill
+    </h3>
+    <p class="text-green-700 leading-relaxed">
+      Pemeriksaan jantung dengan aktivitas fisik menggunakan alat treadmill.
+    </p>
+  </div>
+
+</div>
+</section>
+
+<!-- Promo -->
+<section class="bg-white py-16 shadow-xl relative">
+  <div class="max-w-7xl mx-auto px-6">
+    <!-- Header -->
+    <div class="flex flex-col md:flex-row items-center justify-between mb-16 relative px-6">
+  <!-- Bagian Teks -->
+  <div class="relative max-w-xl">
+    <!-- Ornamen lingkaran transparan -->
+    <div class="absolute -top-10 -left-10 w-32 h-32 bg-green-200 rounded-full opacity-40 blur-xl"></div>
+    <div class="absolute top-20 -left-16 w-20 h-20 bg-green-300 rounded-full opacity-30 blur-lg"></div>
+
+    <!-- Promo Spesial -->
+    <h2 class="promo-text mb-2 relative z-10 text-green-700 italic text-4xl">
+  Promo Spesial
+</h2>
+
+
+    <!-- Judul -->
+    <h1 class="title-text text-6xl md:text-7xl font-bold mb-4 ml-6 text-green-700 relative z-10">
+      "Medical <br> Check Up"
+    </h1>
+
+    <!-- Sub-deskripsi -->
+    <p class="text-gray-600 text-lg mb-6 ml-6 max-w-md relative z-10">
+      Cek kesehatan rutin lebih mudah, cepat, dan terjangkau.  
+      Pastikan kondisi tubuh tetap prima bersama layanan kami.
+    </p>
+
+    <!-- Harga -->
+    <p class="ml-6 text-2xl font-bold text-green-700 relative z-10 mb-6">
+      Mulai dari <span class="text-3xl">Rp 100.000</span>
+    </p>
+    <!-- Ornamen tanda plus -->
+    <div class="absolute -bottom-6 left-0 text-green-500 text-5xl font-bold opacity-70">+</div>
+    <div class="absolute -bottom-12 left-28 text-green-400 text-3xl font-bold opacity-50">+</div>
+  </div>
+
+  <!-- Bagian Foto -->
+  <div class="mt-10 md:mt-0 relative">
+    <img src="lab.patalogi 2.png" 
+         alt="Medical Check Up" 
+         class="w-[420px] md:w-[600px] rounded-lg shadow-xl
+                [mask-image:linear-gradient(to_right,transparent,black_20%,black_100%)]
+                [-webkit-mask-image:linear-gradient(to_right,transparent,black_20%,black_100%)]
+                [mask-repeat:no-repeat] [mask-size:cover]"/>
+
+    <!-- Ornamen di sekitar foto -->
+    <div class="absolute -top-6 -right-6 w-16 h-16 bg-green-300 rounded-full opacity-40 blur-md"></div>
+    <div class="absolute bottom-0 -left-8 text-green-500 text-4xl font-bold opacity-60">+</div>
+
+    <!-- Caption Foto -->
+    <p class="absolute -bottom-8 right-0 text-sm text-gray-500">
+  Gambar Laboratorium Patologi Klinik Utama Diagnosa
+</p>
+
+  </div>
+</div>
+
+
+
+    <!-- Paket Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <!-- Paket Basic -->
+      <div class="bg-white rounded-xl shadow-2xl relative pb-12">
+        <div class="bg-green-500 text-white text-lg font-bold py-3 text-center shadow-md rounded-t-xl">
+          Paket Basic
+        </div>
+        <ul class="p-6 text-gray-700 text-sm space-y-3">
+          <li class="flex items-center"><span class="bg-green-500 text-white rounded-full w-5 h-5 flex items-center justify-center mr-2">✔</span>Pemeriksaan Fisik</li>
+          <li class="flex items-center"><span class="bg-green-500 text-white rounded-full w-5 h-5 flex items-center justify-center mr-2">✔</span>Konsultasi Dokter Spesialis Jantung</li>
+          <li class="flex items-center"><span class="bg-green-500 text-white rounded-full w-5 h-5 flex items-center justify-center mr-2">✔</span>Rekam Jantung</li>
+          <li class="flex items-center"><span class="bg-green-500 text-white rounded-full w-5 h-5 flex items-center justify-center mr-2">✔</span>Gula Darah Puasa</li>
+          <li class="flex items-center"><span class="bg-green-500 text-white rounded-full w-5 h-5 flex items-center justify-center mr-2">✔</span>Thorax PA</li>
+          <li class="flex items-center"><span class="bg-green-500 text-white rounded-full w-5 h-5 flex items-center justify-center mr-2">✔</span>Kolesterol</li>
+          <li class="flex items-center"><span class="bg-green-500 text-white rounded-full w-5 h-5 flex items-center justify-center mr-2">✔</span>Trigliserida</li>
+          <li class="flex items-center"><span class="bg-green-500 text-white rounded-full w-5 h-5 flex items-center justify-center mr-2">✔</span>LDL</li>
+          <li class="flex items-center"><span class="bg-green-500 text-white rounded-full w-5 h-5 flex items-center justify-center mr-2">✔</span>HDL</li>
+        </ul>
+        <!-- Harga Ngambang -->
+        <div class="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-[-10%]">
+          <a href="https://wa.me/6282130471300" target="_blank"
+             class="bg-blue-800 hover:bg-blue-900 text-white px-6 py-2 rounded-full shadow-lg transition block text-center">
+            <p class="line-through text-gray-300 text-xs">Rp 850.000,-</p>
+            <p class="flex items-baseline justify-center gap-1">
+              <span class="text-base">Rp</span>
+              <span class="text-2xl font-extrabold">807.500,-</span>
+            </p>
+          </a>
+        </div>
+      </div>
+
+      <!-- Paket Gold -->
+      <div class="bg-white rounded-xl shadow-2xl relative pb-12">
+        <div class="bg-yellow-500 text-white text-lg font-bold py-3 text-center shadow-md rounded-t-xl">
+          Paket Gold
+        </div>
+        <ul class="p-6 text-gray-700 text-sm space-y-3">
+          <li class="flex items-center"><span class="bg-yellow-500 text-white rounded-full w-5 h-5 flex items-center justify-center mr-2">✔</span>Pemeriksaan Fisik</li>
+          <li class="flex items-center"><span class="bg-yellow-500 text-white rounded-full w-5 h-5 flex items-center justify-center mr-2">✔</span>Konsultasi Dokter Spesialis Jantung</li>
+          <li class="flex items-center"><span class="bg-yellow-500 text-white rounded-full w-5 h-5 flex items-center justify-center mr-2">✔</span>Rekam Jantung</li>
+          <li class="flex items-center"><span class="bg-yellow-500 text-white rounded-full w-5 h-5 flex items-center justify-center mr-2">✔</span>USG Abdomen</li>
+          <li class="flex items-center"><span class="bg-yellow-500 text-white rounded-full w-5 h-5 flex items-center justify-center mr-2">✔</span>Thorax PA</li>
+          <li class="flex items-center"><span class="bg-yellow-500 text-white rounded-full w-5 h-5 flex items-center justify-center mr-2">✔</span>Gula Darah Puasa</li>
+          <li class="flex items-center"><span class="bg-yellow-500 text-white rounded-full w-5 h-5 flex items-center justify-center mr-2">✔</span>Fungsi Ginjal</li>
+          <li class="flex items-center"><span class="bg-yellow-500 text-white rounded-full w-5 h-5 flex items-center justify-center mr-2">✔</span>Fungsi Hati</li>
+          <li class="flex items-center"><span class="bg-yellow-500 text-white rounded-full w-5 h-5 flex items-center justify-center mr-2">✔</span>Profil Lipid Lengkap</li>
+        </ul>
+        <!-- Harga Ngambang -->
+        <div class="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-[-10%]">
+          <a href="https://wa.me/6282130471300" target="_blank"
+             class="bg-blue-800 hover:bg-blue-900 text-white px-6 py-2 rounded-full shadow-lg transition block text-center">
+            <p class="line-through text-gray-300 text-xs">Rp 1.200.000,-</p>
+            <p class="flex items-baseline justify-center gap-1">
+              <span class="text-base">Rp</span>
+              <span class="text-2xl font-extrabold">1.140.000,-</span>
+            </p>
+          </a>
+        </div>
+      </div>
+
+      <!-- Paket Diamond -->
+      <div class="bg-white rounded-xl shadow-2xl relative pb-12">
+        <div class="bg-red-500 text-white text-lg font-bold py-3 text-center shadow-md rounded-t-xl">
+          Paket Diamond
+        </div>
+        <ul class="p-6 text-gray-700 text-sm space-y-3">
+          <li class="flex items-center"><span class="bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center mr-2">✔</span>Pemeriksaan Fisik</li>
+          <li class="flex items-center"><span class="bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center mr-2">✔</span>Konsultasi Dokter Spesialis Jantung</li>
+          <li class="flex items-center"><span class="bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center mr-2">✔</span>Rekam Jantung</li>
+          <li class="flex items-center"><span class="bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center mr-2">✔</span>USG Abdomen</li>
+          <li class="flex items-center"><span class="bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center mr-2">✔</span>CT Scan Kepala</li>
+          <li class="flex items-center"><span class="bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center mr-2">✔</span>Thorax PA</li>
+          <li class="flex items-center"><span class="bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center mr-2">✔</span>Gula Darah Puasa</li>
+          <li class="flex items-center"><span class="bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center mr-2">✔</span>Fungsi Ginjal</li>
+          <li class="flex items-center"><span class="bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center mr-2">✔</span>Fungsi Hati</li>
+          <li class="flex items-center"><span class="bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center mr-2">✔</span>Profil Lipid Lengkap</li>
+        </ul>
+        <!-- Harga Ngambang -->
+        <div class="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-[-10%]">
+          <a href="https://wa.me/6282130471300" target="_blank"
+             class="bg-blue-800 hover:bg-blue-900 text-white px-6 py-2 rounded-full shadow-lg transition block text-center">
+            <p class="line-through text-gray-300 text-xs">Rp 2.000.000,-</p>
+            <p class="flex items-baseline justify-center gap-1">
+              <span class="text-base">Rp</span>
+              <span class="text-2xl font-extrabold">1.900.000,-</span>
+            </p>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tombol Lihat Selengkapnya -->
+    <div class="text-right mt-10">
+      <a href="promo.html" 
+         class="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-lg shadow-md transition">
+        Lihat Promo Lainnya →
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<section class="bg-white-800 py-12 px-6">
+    <section id="form-daftar" class="mt-20"></section>
+  <div class="max-w-3xl mx-auto bg-white rounded-lg shadow-lg p-8">
+<h2 class="text-2xl font-bold text-center text-green-900 mb-6" style="font-family: 'Raleway', sans-serif;"> Pendaftaran Online </h2>
+
+    <form action="#" method="POST" class="space-y-4">
+      <!-- Row 1 -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+  <input id="nama" type="text" placeholder="Nama" 
+         class="w-full p-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-green-600 focus:outline-none" required>
+  <input id="alamat" type="text" placeholder="Alamat" 
+         class="w-full p-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-green-600 focus:outline-none" required>
+</div>
+
+<!-- Row 2 -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+  <input id="telepon" type="tel" placeholder="Nomor Telepon" 
+         class="w-full p-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-green-600 focus:outline-none" required>
+
+  <select id="pelayanan" 
+          class="w-full p-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-green-600 focus:outline-none" required>
+    <option value="">Pilih Pelayanan</option>
+    <option>Radiologi</option>
+    <option>Electrocardiography (EKG)</option>
+    <option>Ultrasonography (USG)</option>
+    <option>Audiometri</option>
+    <option>Spirometri</option>
+    <option>Medical Check Up (MCU)</option>
+    <option>Laboratorium Patologi Klinik</option>
+    <option>Laboratorium Patologi Anatomi</option>
+    <option>Treadmill Test</option>
+  </select>
+</div>
+
+<!-- Date -->
+<input id="date" type="date" 
+       class="w-full p-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-green-600 focus:outline-none" required>
+
+<!-- Message -->
+<textarea id="message" rows="4" placeholder="Pesan" 
+          class="w-full p-3 rounded-md border border-gray-300 focus:ring-2 focus:ring-green-600 focus:outline-none"></textarea>
+
+<!-- Submit -->
+<button onclick="sendToWhatsApp()" 
+        type="button"
+        class="w-full bg-yellow-400 hover:bg-yellow-500 text-green-900 font-semibold py-3 rounded-md transition transform hover:scale-105">
+  Kirim via WhatsApp
+</button>
+
+<script>
+  function sendToWhatsApp() {
+    let nama = document.getElementById("nama").value;
+    let alamat = document.getElementById("alamat").value;
+    let telepon = document.getElementById("telepon").value;
+    let pelayanan = document.getElementById("pelayanan").value;
+    let date = document.getElementById("date").value;
+    let message = document.getElementById("message").value;
+
+    if (nama === "" || alamat === "" || telepon === "" || pelayanan === "" || date === "" || message === "") {
+      alert("Mohon isi semua field sebelum mengirim.");
+      return;
+    }
+
+    let text = `Halo, saya ingin mendaftar .%0A%0A Nama: ${nama}%0A Alamat: ${alamat}%0A Telepon: ${telepon}%0A Pelayanan: ${pelayanan}%0A Tanggal: ${date}%0A Pesan: ${message}`;
+
+    let phone = "6282130471300"; 
+    let url = `https://wa.me/${phone}?text=${text}`;
+    
+    window.open(url, "_blank");
+  }
+</script>
+
+
+    </form>
+  </div>
+</section>
+
+
+
+  <!-- Contact Section -->
+  <section class="bg-white py-20">
+   <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12">
+    <div class="animate-fadeInLeft">
+     <h2 class="text-3xl font-bold text-green-900 mb-6">
+      Hubungi Kami
+     </h2>
+     <p class="text-green-900 mb-6">
+      Punya pertanyaan atau butuh bantuan? Hubungi kami dan kami akan dengan senang hati membantu Anda.
+     </p>
+     <ul class="space-y-4 text-green-900">
+      <li class="flex items-center space-x-4">
+       <i class="fas fa-map-marker-alt text-green-800 text-xl"></i>
+       <span>Jl. Raya Bar. Karangampel, Karangampel Kidul, Kec. Karangampel, Kabupaten Indramayu, Jawa Barat 45283</span>
+      </li>
+      <li class="flex items-center space-x-4">
+  <i class="fab fa-whatsapp text-green-800 text-xl"></i>
+  <a href="https://wa.me/6282130471300" target="_blank" class="hover:underline">
+    +62 821-3047-1300
+  </a>
+</li>
+      <li class="flex items-center space-x-4">
+  <i class="fab fa-instagram text-green-800 text-xl"></i>
+  <a href="https://instagram.com/klinikutamadiagnosa/" target="_blank" class="hover:underline">
+    Instagram
+  </a>
+</li>
+
+</li>
+
+      <div class="bg-green-100 p-4 rounded-lg text-green-900">
+  <p><strong>Jam Operasional:</strong></p>
+  Senin  : 07.00 – 20.00<br>
+  Selasa : 07.00 – 20.00<br>
+  Rabu   : 07.00 – 20.00<br>
+  Kamis  : 07.00 – 20.00<br>
+  Jumat  : 07.00 – 20.00<br>
+  Sabtu  : 07.00 – 20.00<br>
+  Minggu & Tanggal Merah : Libur
+</div>
+
+        </span> 
+      </li>
+     </ul>
+    </div>
+    <div class="animate-fadeInRight">
+      <!-- Ganti img jadi Google Maps -->
+      <iframe 
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.4389023527674!2d108.44622500000001!3d-6.465950599999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6eea6b4f1176cb%3A0xc765ee3c71e5b67e!2sDiagnosa%20Laboratorium%20Klinik%20Karangampel!5e0!3m2!1sid!2sid!4v1757510084647!5m2!1sid!2sid"       
+ width="600" 
+        height="400" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade"
+        class="rounded-lg shadow-lg w-full h-[400px]">
+      </iframe>
+      <a href="https://maps.app.goo.gl/bziTSQyAwem8QfLg8?g_st=ipc" target="_blank" 
+   class="mt-4 inline-block bg-white text-green-900 px-4 py-2 rounded-lg shadow">
+   Buka di Google Maps
+</a>
+
+    </div>
+   </div>
+  </section>
+
+  <!-- Footer -->
+ <footer class="bg-green-800 text-white py-10">
+  <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
+    
+   <div class="flex-shrink-0">
+      <img src="icon tanpa bag.png" 
+           alt="Logo Klinik" 
+           class="w-32 md:w-40 lg:w-48 h-auto object-contain mr-6">
+    </div>
+
+    <!-- Quick Links -->
+    <div>
+      <h2 class="text-xl font-bold mb-4">Quick Links</h2>
+      <ul class="space-y-2">
+        <li><a href="index.html" class="hover:underline">Home</a></li>
+        <li><a href="Layanankami.html" class="hover:underline">Tentang Kami</a></li>
+        <li><a href="Layanankami.html" class="hover:underline">Layanan</a></li>
+        <li><a href="https://wa.me/6282130471300" class="hover:underline">Hubungi Kami</a></li>
+      </ul>
+    </div>
+
+    <!-- Follow Us -->
+    <div>
+      <h2 class="text-xl font-bold mb-4">Follow Us</h2>
+      <div class="flex space-x-4">
+        <a href="https://instagram.com" target="_blank" class="hover:text-yellow-400">
+          <i class="fab fa-instagram text-2xl"></i>
+        </a>
+        <a href="https://wa.me/6282130471300" target="_blank" class="hover:text-yellow-400">
+          <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div class="text-center text-sm mt-10">
+    © 2025 Klinik Utama Diagnosa
+  </div>
+</footer>
+
+   </div>
+  </footer>
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Mobile services dropdown toggle
+    const mobileServicesBtn = document.getElementById('mobile-services-btn');
+    const mobileServicesMenu = document.getElementById('mobile-services-menu');
+    mobileServicesBtn.addEventListener('click', () => {
+      const expanded = mobileServicesBtn.getAttribute('aria-expanded') === 'true';
+      mobileServicesBtn.setAttribute('aria-expanded', !expanded);
+      mobileServicesMenu.classList.toggle('hidden');
+    });
+
+    // Desktop services dropdown toggle with animation
+    const servicesBtn = document.getElementById('services-btn');
+    const servicesMenu = servicesBtn.nextElementSibling;
+
+    function openDropdown() {
+      servicesMenu.classList.remove('opacity-0', 'invisible', 'scale-95');
+      servicesMenu.classList.add('opacity-100', 'visible', 'scale-100');
+      servicesBtn.setAttribute('aria-expanded', 'true');
+    }
+    function closeDropdown() {
+      servicesMenu.classList.add('opacity-0', 'invisible', 'scale-95');
+      servicesMenu.classList.remove('opacity-100', 'visible', 'scale-100');
+      servicesBtn.setAttribute('aria-expanded', 'false');
+    }
+
+    servicesBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (servicesBtn.getAttribute('aria-expanded') === 'true') {
+        closeDropdown();
+      } else {
+        openDropdown();
+      }
+    });
+
+    // Close desktop dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!servicesBtn.contains(e.target) && !servicesMenu.contains(e.target)) {
+        closeDropdown();
+      }
+    });
+
+    // Close mobile menu and dropdown on window resize if desktop
+    window.addEventListener('resize', () => {
+      if(window.innerWidth >= 768){
+        mobileMenu.classList.add('hidden');
+        mobileServicesMenu.classList.add('hidden');
+        mobileServicesBtn.setAttribute('aria-expanded', 'false');
+        closeDropdown();
+      }
+    });
+
+    // Hero image slideshow
+    const heroImages = [
+      {
+        src: "bagian depan 2.jpg",
+        alt: "A friendly doctor consulting with a patient in a modern clinic room with medical equipment"
+      },
+      {
+        src: "bagian depan.jpg",
+        alt: "Doctor using modern technology and digital tablet in a futuristic medical environment"
+      },
+      {
+        src: "bagian depan 3.jpg",
+        alt: "A friendly doctor consulting with a patient in a modern clinic room with medical equipment"
+      }
+    ];
+
+    let currentHeroIndex = 0;
+    const heroImageElement = document.getElementById('hero-image');
+
+    function changeHeroImage() {
+      currentHeroIndex = (currentHeroIndex + 1) % heroImages.length;
+      // Fade out
+      heroImageElement.style.opacity = 0;
+      setTimeout(() => {
+        heroImageElement.src = heroImages[currentHeroIndex].src;
+        heroImageElement.alt = heroImages[currentHeroIndex].alt;
+        // Fade in
+        heroImageElement.style.opacity = 1;
+      }, 500);
+    }
+
+    setInterval(changeHeroImage, 5000);
+  </script>
+ </body>
+</html>
