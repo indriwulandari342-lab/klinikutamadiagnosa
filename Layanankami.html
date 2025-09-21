@@ -127,74 +127,80 @@
   </div>
   <!-- Header / Navbar -->
  <header class="shadow-md sticky top-0 bg-green-200 z-50">
-  <div class="max-w-7xl mx-auto flex justify-between items-center px-4 py-4">
-    
-    <!-- Logo -->
-    <a class="flex items-center space-x-3 flex-shrink-0" href="#">
-      <img alt="Medicare logo" class="w-56 h-auto" src="logo.png"/>
-    </a>
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-4 py-3">
+      
+      <!-- Logo -->
+      <a class="flex items-center space-x-3 flex-shrink-0" href="#">
+        <img alt="Medicare logo" class="w-80 md:w-100 h-auto" src="navbar-removebg.png"/>
+      </a>
 
-    <!-- Desktop Navbar -->
-    <nav>
-      <ul class="hidden md:flex space-x-8 font-semibold text-green-900 relative">
-        <li><a class="hover:text-green-700 transition" href="index.html">Home</a></li>
-        <li><a class="hover:text-green-700 transition" href="Layanankami.html">Tentang Kami</a></li>
-        <li class="relative">
-          <button aria-haspopup="true" aria-expanded="false" id="services-btn" class="flex items-center space-x-1 hover:text-green-700 transition font-semibold focus:outline-none">
+      <!-- Desktop Navbar -->
+      <nav>
+        <ul class="hidden md:flex space-x-8 text-green-900 relative font-bold">
+          <li><a class="hover:text-green-700 transition" href="index.html">Home</a></li>
+          <li><a class="hover:text-green-700 transition" href="Layanankami.html">Tentang Kami</a></li>
+          <li><a class="hover:text-green-700 transition" href="promo.html">Promo</a></li>
+          <li class="relative">
+            <button aria-haspopup="true" aria-expanded="false" id="services-btn" 
+              class="flex items-center space-x-1 hover:text-green-700 transition focus:outline-none font-bold">
+              <span>Pelayanan</span>
+              <i class="fas fa-chevron-down text-sm"></i>
+            </button>
+            <ul aria-label="submenu" 
+                class="absolute left-0 top-full mt-1 w-56 bg-green-200 border border-green-400 rounded-md shadow-lg opacity-0 invisible transition-all duration-300 z-50 origin-top scale-95">
+              <li><a class="block px-4 py-2 hover:bg-green-300 text-green-900 font-bold" href="#">Radiologi</a></li>
+              <li><a class="block px-4 py-2 hover:bg-green-300 text-green-900 font-bold" href="#">Electrocardiography [EKG]</a></li>
+              <li><a class="block px-4 py-2 hover:bg-green-300 text-green-900 font-bold" href="#">Ultrasonography [USG]</a></li>
+              <li><a class="block px-4 py-2 hover:bg-green-300 text-green-900 font-bold" href="#">Audiometri</a></li>
+              <li><a class="block px-4 py-2 hover:bg-green-300 text-green-900 font-bold" href="#">Spirometri</a></li>
+              <li><a class="block px-4 py-2 hover:bg-green-300 text-green-900 font-bold" href="#">Medical Check Up [MCU]</a></li>
+              <li><a class="block px-4 py-2 hover:bg-green-300 text-green-900 font-bold" href="#">Laboratorium Patalogi Klinik</a></li>
+              <li><a class="block px-4 py-2 hover:bg-green-300 text-green-900 font-bold" href="#">Laboratorium Patalogi Anatomi</a></li>
+              <li><a class="block px-4 py-2 hover:bg-green-300 text-green-900 font-bold" href="#">Treadmill</a></li>
+            </ul>
+          </li>
+          <li><a class="hover:text-green-700 transition" href="#">Hubungi Kami</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Button -->
+      <div class="md:hidden flex items-center">
+        <button aria-label="Toggle menu" class="text-green-900 focus:outline-none" id="menu-btn">
+          <i class="fas fa-bars fa-2x"></i> 
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="hidden bg-green-200 shadow-md" id="mobile-menu">
+      <ul class="flex flex-col space-y-2 px-4 py-4 font-bold text-green-900">
+        <li><a class="block hover:text-green-700 transition" href="index.html">Home</a></li>
+        <li><a class="block hover:text-green-700 transition" href="Layanankami.html">Tentang Kami</a></li>
+       <li><a class="block hover:text-green-700 transition" href="promo.html">Promo</a></li>
+        <li>
+          <button aria-haspopup="true" aria-expanded="false" id="mobile-services-btn" 
+            class="w-full flex justify-between items-center px-2 py-2 font-bold hover:text-green-700 focus:outline-none">
             <span>Pelayanan</span>
-            <i class="fas fa-chevron-down text-sm"></i>
+            <i class="fas fa-chevron-down"></i>
           </button>
-          <ul aria-label="submenu" class="absolute left-0 top-full mt-1 w-48 bg-green-200 border border-green-400 rounded-md shadow-lg opacity-0 invisible transition-all duration-300 z-50 origin-top scale-95">
-            <li><a class="block px-4 py-2 hover:bg-green-300 text-green-900" href="#">Radiologi</a></li>
-            <li><a class="block px-4 py-2 hover:bg-green-300 text-green-900" href="#">Electrocardiography [EKG]</a></li>
-            <li><a class="block px-4 py-2 hover:bg-green-300 text-green-900" href="#">Ultrasonography [USG]</a></li>
-            <li><a class="block px-4 py-2 hover:bg-green-300 text-green-900" href="#">Audiometri</a></li>
-            <li><a class="block px-4 py-2 hover:bg-green-300 text-green-900" href="#">Spirometri</a></li>
-            <li><a class="block px-4 py-2 hover:bg-green-300 text-green-900" href="#">Medical Check Up [MCU]</a></li>
-            <li><a class="block px-4 py-2 hover:bg-green-300 text-green-900" href="#">Laboratorium Patalogi Klinik</a></li>
-            <li><a class="block px-4 py-2 hover:bg-green-300 text-green-900" href="#">Laboratorium Patalogi Anatomi</a></li>
-            <li><a class="block px-4 py-2 hover:bg-green-300 text-green-900" href="#">Treadmill</a></li>
+          <ul aria-label="submenu" 
+              class="hidden flex-col pl-6 mt-1 space-y-1 text-green-900 font-bold" 
+              id="mobile-services-menu">
+            <li><a class="block hover:text-green-700 transition" href="#">Radiologi</a></li>
+            <li><a class="block hover:text-green-700 transition" href="#">Electrocardiography [EKG]</a></li>
+            <li><a class="block hover:text-green-700 transition" href="#">Ultrasonography [USG]</a></li>
+            <li><a class="block hover:text-green-700 transition" href="#">Audiometri</a></li>
+            <li><a class="block hover:text-green-700 transition" href="#">Spirometri</a></li>
+            <li><a class="block hover:text-green-700 transition" href="#">Medical Check Up [MCU]</a></li>
+            <li><a class="block hover:text-green-700 transition" href="#">Laboratorium Patalogi Klinik</a></li>
+            <li><a class="block hover:text-green-700 transition" href="#">Laboratorium Patalogi Anatomi</a></li>
+            <li><a class="block hover:text-green-700 transition" href="#">Treadmill</a></li>
           </ul>
         </li>
-        <li><a class="hover:text-green-700 transition" href="#">Hubungi Kami</a></li>
+        <li><a class="block hover:text-green-700 transition" href="#">Hubungi Kami</a></li>
       </ul>
-    </nav>
-
-    <!-- Mobile Button -->
-    <div class="md:hidden">
-      <button aria-label="Toggle menu" class="text-green-900 focus:outline-none" id="menu-btn">
-        <i class="fas fa-bars fa-lg"></i>
-      </button>
     </div>
-  </div>
-
-  <!-- Mobile Menu -->
-  <div class="hidden bg-green-200 shadow-md" id="mobile-menu">
-    <ul class="flex flex-col space-y-2 px-4 py-4 font-semibold text-green-900">
-      <li><a class="block hover:text-green-700 transition" href="index.html">Home</a></li>
-      <li><a class="block hover:text-green-700 transition" href="Layanankami.html">Tentang Kami</a></li>
-      <li>
-        <button aria-haspopup="true" aria-expanded="false" id="mobile-services-btn" class="w-full flex justify-between items-center px-2 py-2 font-semibold hover:text-green-700 focus:outline-none">
-          <span>Pelayanan</span>
-          <i class="fas fa-chevron-down"></i>
-        </button>
-        <ul aria-label="submenu" class="hidden flex-col pl-6 mt-1 space-y-1 text-green-900" id="mobile-services-menu">
-          <li><a class="block hover:text-green-700 transition" href="#">Radiologi</a></li>
-          <li><a class="block hover:text-green-700 transition" href="#">Electrocardiography [EKG]</a></li>
-          <li><a class="block hover:text-green-700 transition" href="#">Ultrasonography [USG]</a></li>
-          <li><a class="block hover:text-green-700 transition" href="#">Audiometri</a></li>
-          <li><a class="block hover:text-green-700 transition" href="#">Spirometri</a></li>
-          <li><a class="block hover:text-green-700 transition" href="#">Medical Check Up [MCU]</a></li>
-          <li><a class="block hover:text-green-700 transition" href="#">Laboratorium Patalogi Klinik</a></li>
-          <li><a class="block hover:text-green-700 transition" href="#">Laboratorium Patalogi Anatomi</a></li>
-          <li><a class="block hover:text-green-700 transition" href="#">Treadmill</a></li>
-        </ul>
-      </li>
-      <li><a class="block hover:text-green-700 transition" href="#">Hubungi Kami</a></li>
-    </ul>
-  </div>
-</header>
-
+  </header>
 
   <!-- Hero Section -->
   <section class="relative bg-green-100 overflow-hidden">
@@ -296,132 +302,68 @@
   </div>
 </section>
 
-  <section class="relative py-16 px-6">
-  <!-- Background dekorasi -->
-  <div class="absolute inset-0 bg-gradient-to-r from-green-700 to-green-500"></div>
-  <div class="absolute inset-0 opacity-20">
-    <!-- Icon plus dekorasi -->
-    <div class="absolute top-10 left-10 text-white text-5xl font-bold">+</div>
-    <div class="absolute top-20 right-20 text-white text-6xl font-bold">+</div>
-    <div class="absolute bottom-16 left-1/3 text-white text-7xl font-bold">+</div>
-  </div>
-
-  <!-- Konten -->
-  <div class="relative max-w-6xl mx-auto text-center text-white">
-    <!-- Judul -->
-    <h2 class="text-3xl md:text-4xl font-extrabold mb-6">
-      AKREDITASI KLINIK UTAMA DIAGNOSA
-    </h2>
-    <p class="max-w-3xl mx-auto text-lg md:text-xl leading-relaxed mb-12">
-      Klinik Utama Diagnosa telah Lulus Akreditasi Tingkat 
-      <span class="font-bold">PARIPURNA</span> 
-      sesuai dengan Standar Akreditasi Kementerian Kesehatan (STARKES) 
-      Republik Indonesia pada Tahun <span class="font-bold">2024</span>.
-    </p>
-
-    <!-- Grid Sertifikat -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-0 w-full">
-  
-  <!-- Sertifikat 1 -->
-  <div class="flex justify-center items-center bg-white">
-    <a href="sertif akre.jpg" target="_blank" class="block group">
+ <section class="relative py-16 px-6 bg-gray-50 space-y-12">
+  <!-- Sertifikat Akreditasi -->
+  <div class="max-w-6xl mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden grid grid-cols-1 md:grid-cols-2">
+    
+    <!-- Kolom Kiri: Gambar -->
+    <div class="h-full">
       <img src="sertif akre.jpg" 
-           alt="Sertifikat Akreditasi 1" 
-           class="w-full h-auto object-contain rounded-lg shadow-lg group-hover:scale-105 transition-transform duration-300" />
-    </a>
+           alt="Sertifikat Akreditasi" 
+           class="w-full h-full object-contain p-4 rounded-lg" />
+    </div>
+
+    <!-- Kolom Kanan: Konten -->
+    <div class="bg-gradient-to-br from-green-200 via-green-300 to-green-400 text-gray-900 flex flex-col justify-center p-8 md:p-12 space-y-6">
+      <h2 class="text-4xl md:text-5xl font-extrabold leading-tight text-green-900 border-b-4 border-green-700 pb-2">
+        AKREDITASI KLINIK UTAMA DIAGNOSA
+      </h2>
+      <p class="text-lg md:text-xl leading-relaxed">
+        Klinik Utama Diagnosa telah Lulus Akreditasi Tingkat 
+        <span class="font-extrabold text-green-800 bg-white/40 px-2 py-1 rounded-lg">⭐ PARIPURNA ⭐</span> 
+        sesuai dengan Standar Akreditasi Kementerian Kesehatan (STARKES) 
+        Republik Indonesia pada Tahun <span class="font-bold text-green-900 underline">2024</span>.
+      </p>
+    </div>
   </div>
 
-  <!-- Sertifikat 2 -->
-  <div class="flex justify-center items-center bg-white">
-    <a href="SERTIFIKAT iso.jpg" target="_blank" class="block group">
-      <img src="SERTIFIKAT iso.jpg" 
-           alt="Sertifikat Akreditasi 2" 
-           class="w-full h-auto object-contain rounded-lg shadow-lg group-hover:scale-105 transition-transform duration-300" />
-    </a>
+  <!-- Sertifikat ISO -->
+ <div class="max-w-6xl mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden grid grid-cols-1 md:grid-cols-2 gap-6">
+
+  <!-- Konten Kiri -->
+  <div class="bg-gradient-to-br from-blue-100 via-blue-200 to-blue-300 text-gray-900 flex flex-col justify-center p-8 md:p-12 space-y-6">
+    <h2 class="text-4xl md:text-5xl font-extrabold leading-tight text-blue-900 border-b-4 border-blue-500 pb-3">
+      SERTIFIKAT ISO 9001:2015
+    </h2>
+    <p class="text-lg md:text-xl leading-relaxed">
+      Klinik Utama Diagnosa juga telah memperoleh 
+      <span class="font-bold text-blue-900">Sertifikasi ISO 9001:2015</span>, 
+      sebagai standar internasional untuk sistem manajemen mutu. 
+      Hal ini menunjukkan komitmen kami dalam memberikan pelayanan 
+      kesehatan yang <span class="font-semibold">konsisten, aman, 
+      dan berkualitas tinggi</span>.
+    </p>
+    <ul class="list-disc pl-6 text-base md:text-lg space-y-2">
+      <li>Penerapan standar mutu internasional</li>
+      <li>Peningkatan pelayanan secara berkesinambungan</li>
+      <li>Kepercayaan lebih dari masyarakat & mitra</li>
+    </ul>
+  </div>
+
+  <!-- Gambar Kanan -->
+  <div class="flex items-center justify-center bg-gray-50 p-6">
+    <img src="SERTIFIKAT iso.jpg" 
+         alt="Sertifikat ISO 9001:2015" 
+         class="w-full max-h-[600px] object-contain rounded-lg shadow-md" />
   </div>
 
 </div>
-</div></section>
 
-<section class="max-w-7xl mx-auto px-4 py-20 bg-white">
-  <!-- Judul Utama -->
-  <h2 class="text-4xl font-extrabold text-center text-green-900 mb-12" data-aos="fade-up">
-  KEUNGGULAN DIAGNOSA
-  </h2>    
-   <section class="py-12 px-6 max-w-7xl mx-auto">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-center">
+</section>
 
-      <!-- Dedication -->
-      <div class="flex flex-col items-center">
-        <img src="https://img.icons8.com/ios-filled/100/6abf4b/time.png" alt="Dedication Icon" class="w-16 h-16 mb-4">
-        <h3 class="text-xl font-bold mb-2">Dedication</h3>
-        <p class="text-gray-600">
-          DIAGNOSA memberikan seluruh tenaga, pikiran dan waktu untuk pelayanan terbaik.
-        </p>
-      </div>
 
-      <!-- Integrity -->
-      <div class="flex flex-col items-center">
-        <img src="https://img.icons8.com/ios-filled/100/6abf4b/handshake.png" alt="Integrity Icon" class="w-16 h-16 mb-4">
-        <h3 class="text-xl font-bold mb-2">INTEGRITY</h3>
-        <p class="text-gray-600">
-          DIAGNOSA berupaya menjunjung tinggi kejujuran, kebenaran dan ketepatan pelayanan.
-        </p>
-      </div>
 
-      <!-- Accountable -->
-      <div class="flex flex-col items-center">
-        <img src="https://img.icons8.com/ios-filled/100/6abf4b/checklist.png" alt="Accountable Icon" class="w-16 h-16 mb-4">
-        <h3 class="text-xl font-bold mb-2">ACCOUNTABLE</h3>
-        <p class="text-gray-600">
-          DIAGNOSA bertanggung jawab penuh terhadap hasil pemeriksaan yang dilakukan.
-        </p>
-      </div>
 
-    </div>
-  </section>
-  <!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Value Diagnosa</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-50">
-
-  <section class="py-12 px-6 max-w-7xl mx-auto">
-    <div class="flex flex-col md:flex-row justify-between items-start gap-10 text-center">
-
-      <!-- Grow -->
-      <div class="flex-1 flex flex-col items-center">
-        <img src="https://img.icons8.com/ios-filled/100/6abf4b/combo-chart.png" alt="Grow Icon" class="w-16 h-16 mb-4">
-        <h3 class="text-xl font-bold mb-2">GROW</h3>
-        <p class="text-gray-600">
-          DIAGNOSA terus tumbuh dan berkembang dalam meningkatkan kualitas pelayanan.
-        </p>
-      </div>
-
-      <!-- New Technology -->
-      <div class="flex-1 flex flex-col items-center">
-        <img src="https://img.icons8.com/ios-filled/100/6abf4b/laptop.png" alt="New Technology Icon" class="w-16 h-16 mb-4">
-        <h3 class="text-xl font-bold mb-2">NEW TECHNOLOGY</h3>
-        <p class="text-gray-600">
-          DIAGNOSA menggunakan teknologi terbarukan untuk menunjang pemeriksaan yang akurat.
-        </p>
-      </div>
-
-      <!-- Occupation Health & Safety -->
-      <div class="flex-1 flex flex-col items-center">
-        <img src="https://img.icons8.com/ios-filled/100/6abf4b/worker-female.png" alt="Health & Safety Icon" class="w-16 h-16 mb-4">
-        <h3 class="text-xl font-bold mb-2">OCCUPATION HEALTH &amp; SAFETY</h3>
-        <p class="text-gray-600">
-          DIAGNOSA memelihara Kesehatan dan keselamatan lingkungan kerja.
-        </p>
-      </div>
-
-    </div>
-  </section>
 
 <script>
   function sendToWhatsApp() {
