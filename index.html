@@ -27,6 +27,25 @@
     }
   </style>
   <style>
+    .check-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9999px; /* full bulat */
+    width: 20px;
+    height: 20px;
+    margin-right: 0.5rem;
+    position: relative;
+  }
+
+  /* Ceklis putih */
+  .check-circle::before {
+    content: "✔";
+    color: #fff; /* ceklis selalu putih */
+    font-size: 12px;
+    font-weight: bold;
+    position: absolute;
+  }
     /* Promo Spesial - gaya Latin */
     .promo-text {
       font-family: 'Great Vibes', cursive;
@@ -51,7 +70,7 @@
 <body class="bg-green-100 text-gray-900">
 
   <!-- Tombol WhatsApp -->
-  <a href="https://wa.me/6282130471300?text=Halo%20saya%20butuh%20informasi" 
+  <a href="https://wa.me/6282130471300?text=Halo saya ingin mendaftar" 
      target="_blank"
      class="fixed bottom-4 right-4 bg-green-600 text-white p-4 rounded-full shadow-lg hover:bg-green-700 transition transform hover:scale-110 z-50">
     <i class="fab fa-whatsapp text-3xl"></i>
@@ -359,16 +378,16 @@ Bersama Klinik Utama Diagnosa, wujudkan hidup sehat dan berkualitas. Didukung do
      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
   <!-- Paket Hemat -->
   <div class="bg-white rounded-xl shadow-2xl relative pb-12">
-    <div class="bg-green-500 text-white text-lg font-bold py-3 text-center shadow-md rounded-t-xl">
-      Paket Hemat
-    </div>
-    <ul class="p-6 text-gray-700 text-sm space-y-3">
-      <li class="flex items-center"><span class="bg-green-500 text-white rounded-full w-5 h-5 flex items-center justify-center mr-2">✔</span>Hematologi Rutin</li>
-      <li class="flex items-center"><span class="bg-green-500 text-white rounded-full w-5 h-5 flex items-center justify-center mr-2">✔</span>Gula Darah Sewaktu</li>
-      <li class="flex items-center"><span class="bg-green-500 text-white rounded-full w-5 h-5 flex items-center justify-center mr-2">✔</span>Cholesterol Total</li>
-      <li class="flex items-center"><span class="bg-green-500 text-white rounded-full w-5 h-5 flex items-center justify-center mr-2">✔</span>Trigliserida</li>
-      <li class="flex items-center"><span class="bg-green-500 text-white rounded-full w-5 h-5 flex items-center justify-center mr-2">✔</span>Asam Urat</li>
-    </ul>
+      <div class="bg-green-500 text-white text-lg font-bold py-3 text-center shadow-md rounded-t-xl">
+        Paket Hemat
+      </div>
+      <ul class="p-6 text-gray-700 text-sm space-y-3">
+        <li class="flex items-center"><span class="check-circle bg-green-500"></span>Hematologi Rutin</li>
+        <li class="flex items-center"><span class="check-circle bg-green-500"></span>Gula Darah Sewaktu</li>
+        <li class="flex items-center"><span class="check-circle bg-green-500"></span>Cholesterol Total</li>
+        <li class="flex items-center"><span class="check-circle bg-green-500"></span>Trigliserida</li>
+        <li class="flex items-center"><span class="check-circle bg-green-500"></span>Asam Urat</li>
+      </ul>
     <!-- Harga Ngambang -->
     <div class="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-[-10%]">
       <button
@@ -385,15 +404,15 @@ Bersama Klinik Utama Diagnosa, wujudkan hidup sehat dan berkualitas. Didukung do
 
   <!-- Paket Mini -->
   <div class="bg-white rounded-xl shadow-2xl relative pb-12">
-    <div class="bg-yellow-500 text-white text-lg font-bold py-3 text-center shadow-md rounded-t-xl">
-      Paket Mini
-    </div>
-    <ul class="p-6 text-gray-700 text-sm space-y-3">
-      <li class="flex items-center"><span class="bg-yellow-500 text-white rounded-full w-5 h-5 flex items-center justify-center mr-2">✔</span>Hematologi Lengkap</li>
-      <li class="flex items-center"><span class="bg-yellow-500 text-white rounded-full w-5 h-5 flex items-center justify-center mr-2">✔</span>Urine Lengkap</li>
-      <li class="flex items-center"><span class="bg-yellow-500 text-white rounded-full w-5 h-5 flex items-center justify-center mr-2">✔</span>Rontgen Thorax</li>
-      <li class="flex items-center"><span class="bg-yellow-500 text-white rounded-full w-5 h-5 flex items-center justify-center mr-2">✔</span>USG Abdomen</li>
-    </ul>
+      <div class="bg-yellow-500 text-white text-lg font-bold py-3 text-center shadow-md rounded-t-xl">
+        Paket Mini
+      </div>
+      <ul class="p-6 text-gray-700 text-sm space-y-3">
+        <li class="flex items-center"><span class="check-circle bg-yellow-500"></span>Hematologi Lengkap</li>
+        <li class="flex items-center"><span class="check-circle bg-yellow-500"></span>Urine Lengkap</li>
+        <li class="flex items-center"><span class="check-circle bg-yellow-500"></span>Rontgen Thorax</li>
+        <li class="flex items-center"><span class="check-circle bg-yellow-500"></span>USG Abdomen</li>
+      </ul>
     <!-- Harga Ngambang -->
     <div class="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-[-10%]">
       <button
@@ -410,13 +429,13 @@ Bersama Klinik Utama Diagnosa, wujudkan hidup sehat dan berkualitas. Didukung do
 
   <!-- Paket Paru Sehat -->
   <div class="bg-white rounded-xl shadow-2xl relative pb-12">
-    <div class="bg-red-500 text-white text-lg font-bold py-3 text-center shadow-md rounded-t-xl">
-      Paket Paru Sehat
-    </div>
-    <ul class="p-6 text-gray-700 text-sm space-y-3">
-      <li class="flex items-center"><span class="bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center mr-2">✔</span>Hematologi Lengkap</li>
-      <li class="flex items-center"><span class="bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center mr-2">✔</span>Rontgen Thorax</li>
-    </ul>
+      <div class="bg-red-500 text-white text-lg font-bold py-3 text-center shadow-md rounded-t-xl">
+        Paket Paru Sehat
+      </div>
+      <ul class="p-6 text-gray-700 text-sm space-y-3">
+        <li class="flex items-center"><span class="check-circle bg-red-500"></span>Hematologi Lengkap</li>
+        <li class="flex items-center"><span class="check-circle bg-red-500"></span>Rontgen Thorax</li>
+      </ul>
     <!-- Harga Ngambang -->
     <div class="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-[-10%]">
       <button
@@ -618,19 +637,21 @@ Bersama Klinik Utama Diagnosa, wujudkan hidup sehat dan berkualitas. Didukung do
     }
 
     // Buat isi pesan WA
-    let text = `Halo, saya ingin mendaftar.%0A%0A` +
-               `Nama: ${nama}%0A` +
-               `Alamat: ${alamat}%0A` +
-               `Telepon: ${telepon}%0A` +
-               `Paket: ${pelayanan}%0A` +
-               `Tanggal: ${date}`;
+    let text = 
+  "Halo, saya ingin mendaftar.\n" +
+  "Nama: " + nama + "\n" +
+  "Alamat: " + alamat + "\n" +
+  "Telepon: " + telepon + "\n" +
+  "Pelayanan: " + pelayanan + "\n" +
+  "Tanggal: " + date;
+
 
     // Tambahkan pesan hanya jika ada
     if (message) {
-      text += `%0A%0APesan: ${message}`;
+      text += `Pesan: ${message}`;
     }
 
-    let phone = "6282130471300"; // ganti nomor tujuan
+    let phone = "6282130471300"; 
     let url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
     window.open(url, "_blank");
   }
