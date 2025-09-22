@@ -66,7 +66,7 @@
 <body class="bg-green-100 text-gray-900">
 
   <!-- Tombol WhatsApp -->
-  <a href="https://wa.me/6282130471300?text=Halo%20saya%20butuh%20informasi" 
+ <a href="https://wa.me/6282130471300?text=Halo saya ingin mendaftar" 
      target="_blank"
      class="fixed bottom-4 right-4 bg-green-600 text-white p-4 rounded-full shadow-lg hover:bg-green-700 transition transform hover:scale-110 z-50">
     <i class="fab fa-whatsapp text-3xl"></i>
@@ -556,19 +556,19 @@ function sendToWhatsApp() {
     return;
   }
 
-  let text = `Halo, saya ingin mendaftar.%0A%0A` +
-           `Nama: ${nama}%0A` +
-           `Alamat: ${alamat}%0A` +
-           `No Telepon: ${telepon}%0A` +
-           `Paket: ${pelayanan}%0A` +
-           `Harga: ${harga}%0A` +
+  let text = `Halo, saya ingin mendaftar.\n\n` +
+           `Nama: ${nama}\n` +
+           `Alamat: ${alamat}\n` +
+           `No Telepon: ${telepon}\n` +
+           `Paket: ${pelayanan}\n` +
+           `Harga: ${harga}\n` +
            `Tanggal: ${date}`;
 
 if (message) {
-  text += `%0A Pesan: ${message}`;
+  text += `\nPesan: ${message}`;
 }
 
-let url = "https://wa.me/6281234567890?text=" + text;
+let url = "https://wa.me/6282130471300?text=" + text;
 window.open(url, "_blank");
 
 
