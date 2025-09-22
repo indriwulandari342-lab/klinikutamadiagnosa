@@ -36,12 +36,14 @@
 
   /* Ceklis putih */
   .check-circle::before {
-    content: "✔";
-    color: #fff; /* ceklis selalu putih */
-    font-size: 12px;
-    font-weight: bold;
-    position: absolute;
-  }
+  content: "\2714";       /* pakai Unicode biar konsisten */
+  color: #fff;            /* selalu putih */
+  font-family: 'Nunito', sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  position: absolute;
+}
+
     /* Promo Spesial - gaya Latin */
     .promo-text {
       font-family: 'Great Vibes', cursive;
