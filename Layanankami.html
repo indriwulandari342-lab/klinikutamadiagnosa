@@ -1,4 +1,540 @@
-<section class="py-8 bg-green-50">
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>Klinik Utama Diagnosa</title>
+
+  <!-- Favicon (icon di tab browser) -->
+  <link rel="icon" type="image/png" href="logo atas.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&amp;family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+   body {
+      font-family: 'Open Sans', sans-serif;
+    }
+    /* Animate dropdown fade and slide */
+    .dropdown-enter {
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    .dropdown-enter-active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .dropdown-leave {
+      opacity: 1;
+      transform: translateY(0);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    .dropdown-leave-active {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    /* Tailwind custom animations */
+    @keyframes fadeInDown {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes fadeInLeft {
+      0% {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    @keyframes fadeInRight {
+      0% {
+        opacity: 0;
+        transform: translateX(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    .animate-fadeInDown {
+      animation: fadeInDown 0.8s ease forwards;
+    }
+    .animate-fadeIn {
+      animation: fadeIn 0.8s ease forwards;
+    }
+    .animate-fadeInUp {
+      animation: fadeInUp 0.8s ease forwards;
+    }
+    .animate-fadeInLeft {
+      animation: fadeInLeft 0.8s ease forwards;
+    }
+    .animate-fadeInRight {
+      animation: fadeInRight 0.8s ease forwards;
+    }
+    .delay-200 {
+      animation-delay: 0.2s;
+    }
+    .delay-400 {
+      animation-delay: 0.4s;
+    }
+    .delay-600 {
+      animation-delay: 0.6s;
+    }
+  </style>
+  <a href="https://wa.me/6282130471300?text=Halo saya ingin mendaftar" 
+     target="_blank"
+     class="fixed bottom-4 right-4 bg-green-600 text-white p-4 rounded-full shadow-lg hover:bg-green-700 transition transform hover:scale-110 z-50">
+    <i class="fab fa-whatsapp text-3xl"></i>
+  </a>
+ </head>
+ <body class="bg-white-100 text-gray-900">
+  <!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+   duration: 1500,  
+    easing: 'ease-out-cubic', 
+    once: true, 
+  });
+</script>
+  </div>
+  <!-- Header / Navbar -->
+ <header class="shadow-md sticky top-0 bg-green-200 z-50">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-4 py-3">
+      
+      <!-- Logo -->
+      <a class="flex items-center space-x-3 flex-shrink-0" href="#">
+        <img alt="Medicare logo" class="w-80 md:w-100 h-auto" src="navbar-removebg.png"/>
+      </a>
+
+      <!-- Desktop Navbar -->
+      <nav>
+        <ul class="hidden md:flex space-x-8 text-green-900 relative font-bold">
+          <li><a class="hover:text-green-700 transition" href="index.html">Home</a></li>
+          <li><a class="hover:text-green-700 transition" href="Layanankami.html">Tentang Kami</a></li>
+          <li><a class="hover:text-green-700 transition" href="promo.html">Promo</a></li>
+          <li class="relative">
+            <button aria-haspopup="true" aria-expanded="false" id="services-btn" 
+              class="flex items-center space-x-1 hover:text-green-700 transition focus:outline-none font-bold">
+              <span>Pelayanan</span>
+              <i class="fas fa-chevron-down text-sm"></i>
+            </button>
+            <ul aria-label="submenu" 
+                class="absolute left-0 top-full mt-1 w-56 bg-green-200 border border-green-400 rounded-md shadow-lg opacity-0 invisible transition-all duration-300 z-50 origin-top scale-95">
+              <li><a class="block px-4 py-2 hover:bg-green-300 text-green-900 font-bold" href="#">Radiologi</a></li>
+              <li><a class="block px-4 py-2 hover:bg-green-300 text-green-900 font-bold" href="#">Electrocardiography [EKG]</a></li>
+              <li><a class="block px-4 py-2 hover:bg-green-300 text-green-900 font-bold" href="#">Ultrasonography [USG]</a></li>
+              <li><a class="block px-4 py-2 hover:bg-green-300 text-green-900 font-bold" href="#">Audiometri</a></li>
+              <li><a class="block px-4 py-2 hover:bg-green-300 text-green-900 font-bold" href="#">Spirometri</a></li>
+              <li><a class="block px-4 py-2 hover:bg-green-300 text-green-900 font-bold" href="#">Medical Check Up [MCU]</a></li>
+              <li><a class="block px-4 py-2 hover:bg-green-300 text-green-900 font-bold" href="#">Laboratorium Patalogi Klinik</a></li>
+              <li><a class="block px-4 py-2 hover:bg-green-300 text-green-900 font-bold" href="#">Laboratorium Patalogi Anatomi</a></li>
+              <li><a class="block px-4 py-2 hover:bg-green-300 text-green-900 font-bold" href="#">Treadmill</a></li>
+            </ul>
+          </li>
+          <li><a class="hover:text-green-700 transition" href="#">Hubungi Kami</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Button -->
+      <div class="md:hidden flex items-center">
+        <button aria-label="Toggle menu" class="text-green-900 focus:outline-none" id="menu-btn">
+          <i class="fas fa-bars fa-2x"></i> 
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="hidden bg-green-200 shadow-md" id="mobile-menu">
+      <ul class="flex flex-col space-y-2 px-4 py-4 font-bold text-green-900">
+        <li><a class="block hover:text-green-700 transition" href="index.html">Home</a></li>
+        <li><a class="block hover:text-green-700 transition" href="Layanankami.html">Tentang Kami</a></li>
+       <li><a class="block hover:text-green-700 transition" href="promo.html">Promo</a></li>
+        <li>
+          <button aria-haspopup="true" aria-expanded="false" id="mobile-services-btn" 
+            class="w-full flex justify-between items-center px-2 py-2 font-bold hover:text-green-700 focus:outline-none">
+            <span>Pelayanan</span>
+            <i class="fas fa-chevron-down"></i>
+          </button>
+          <ul aria-label="submenu" 
+              class="hidden flex-col pl-6 mt-1 space-y-1 text-green-900 font-bold" 
+              id="mobile-services-menu">
+            <li><a class="block hover:text-green-700 transition" href="#">Radiologi</a></li>
+            <li><a class="block hover:text-green-700 transition" href="#">Electrocardiography [EKG]</a></li>
+            <li><a class="block hover:text-green-700 transition" href="#">Ultrasonography [USG]</a></li>
+            <li><a class="block hover:text-green-700 transition" href="#">Audiometri</a></li>
+            <li><a class="block hover:text-green-700 transition" href="#">Spirometri</a></li>
+            <li><a class="block hover:text-green-700 transition" href="#">Medical Check Up [MCU]</a></li>
+            <li><a class="block hover:text-green-700 transition" href="#">Laboratorium Patalogi Klinik</a></li>
+            <li><a class="block hover:text-green-700 transition" href="#">Laboratorium Patalogi Anatomi</a></li>
+            <li><a class="block hover:text-green-700 transition" href="#">Treadmill</a></li>
+          </ul>
+        </li>
+        <li><a class="block hover:text-green-700 transition" href="#">Hubungi Kami</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative bg-green-100 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 py-16 flex flex-col md:flex-row items-center md:items-start gap-10 relative">
+    
+    <!-- Bagian Gambar -->
+    <div class="md:w-1/2 relative flex justify-center">
+      <!-- Lingkaran Background -->
+      <div 
+  class="absolute -bottom-10 -left-10 w-60 h-28 
+         md:w-[400px] md:h-[200px] 
+         bg-green-900 rounded-full z-0 
+         translate-x-3 md:translate-x-0">
+</div>
+      <div class="relative z-10">
+        <!-- Foto Dokter -->
+        <img 
+          src="tentang.jpg" 
+          alt="Dokter Konsultasi" 
+          class="rounded-full border-[6px] md:border-[10px] border-white shadow-xl w-48 h-48 md:w-[350px] md:h-[350px] object-cover"
+        />
+
+        <!-- Icon Dokter -->
+        <div class="absolute -bottom-8 left-1/2 -translate-x-1/2 
+            bg-green-50 border-4 border-green-900 w-16 h-16 md:w-24 md:h-24 
+            rounded-full flex items-center justify-center shadow-md">
+          <svg xmlns="http://www.w3.org/2000/svg" 
+               class="h-8 w-8 md:h-12 md:w-12 text-green-900" 
+               viewBox="0 0 64 64" fill="currentColor">
+            <path d="M32 4C21.148 4 12 13.148 12 24s9.148 20 20 20 20-9.148 20-20S42.852 4 32 4zm0 36c-8.837 0-16-7.163-16-16S23.163 8 32 8s16 7.163 16 16-7.163 16-16 16z"/>
+            <path d="M20 48c0-6.627 5.373-12 12-12h0c6.627 0 12 5.373 12 12v4H20v-4z"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bagian Teks -->
+    <div class="md:w-1/2 space-y-6 relative z-10 md:-ml-20 text-center md:text-left">
+      <h1 class="text-3xl md:text-5xl font-extrabold text-green-900 leading-tight font-[Montserrat]">
+        <span class="block font-bold">KLINIK UTAMA</span>
+        <span class="block font-black">DIAGNOSA</span>
+      </h1>
+      <p class="text-green-900 text-base md:text-lg leading-relaxed">
+        Klinik Utama Diagnosa adalah klinik yang didirikan pada tahun 2007, awalnya berfokus pada pemeriksaan 
+        laboratorium dan radiologi. Pada tahun 2019, klinik ini berkembang menjadi PT. Diagnosa Pratama Mulia, 
+        memperluas layanan kesehatan umum dan menjadi Perusahaan Jasa Keselamatan dan Kesehatan Kerja (PJK3) 
+        yang diakui oleh Kementerian Ketenagakerjaan.
+      </p>
+    </div>
+
+    <!-- Ornamen Plus -->
+    <div class="absolute top-6 left-6 text-green-300 text-4xl md:text-6xl font-bold">+</div>
+    <div class="absolute bottom-6 right-6 text-green-300 text-4xl md:text-6xl font-bold">+</div>
+  </div>
+</section>
+
+
+
+  <section class="max-w-7xl mx-auto px-6 py-16 bg-white">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+
+    <!-- TEKS (Visi & Misi) -->
+   <div class="text-green-900 text-lg space-y-6 font-[Poppins]">
+  <!-- VISI -->
+  <h2 class="text-2xl md:text-3xl font-black text-green-900 mb-6">VISI</h2>
+  <p class="text-base md:text-lg leading-relaxed mb-6 font-normal">
+    Klinik Utama yang mampu untuk selalu tumbuh, berkembang, adaptif serta memberikan manfaat bagi masyarakat.
+  </p>
+
+  <!-- MISI -->
+  <h2 class="text-2xl md:text-3xl font-black text-green-900 mb-4">MISI</h2>
+  <ul class="list-disc list-inside space-y-2 text-base md:text-lg font-normal">
+    <li>Memberikan mutu pemeriksaan yang baik.</li>
+    <li>Memberikan pelayanan yang Prima dengan harga terjangkau oleh seluruh lapisan masyarakat.</li>
+    <li>Memberikan Manfaat bagi banyak orang.</li>
+    <li>Mampu bersaing dengan menjaga kepercayaan rekanan dan masyarakat.</li>
+    <li>Pengembangan keahlian dan pengetahuan bagi karyawan didukung dengan Teknologi terbaru.</li>
+    <li>Mendukung program pemerintah dalam meningkatkan kesehatan masyarakat.</li>
+  </ul>
+</div>
+
+    <!-- FOTO + ELEMEN LENGKUNG -->
+    <div class="relative flex justify-center items-center">
+      <!-- Shape Hijau Muda -->
+      <div class="absolute -top-10 right-0 
+            w-[200px] h-[200px] md:w-[280px] md:h-[280px] 
+            bg-green-200 rounded-bl-[120px] z-0">
+</div>
+
+      <!-- Shape Hijau Tua -->
+      <div class="absolute bottom-[-100px] left-2 w-[160px] h-[160px] 
+            bg-green-800 rounded-tr-[80px] z-0
+            md:bottom-0 md:left-0 md:w-[260px] md:h-[260px] md:rounded-tr-[120px]">
+</div>
+      <!-- FOTO -->
+      <img src="mentahan.png" alt="Foto Visi Klinik"
+     class="relative z-10 rounded-lg shadow-lg w-[260px] md:w-[340px] object-cover">
+
+  </div>
+</section>
+
+ <section class="relative py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 space-y-12">
+  <!-- Sertifikat Akreditasi -->
+  <div class="max-w-6xl mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden grid grid-cols-1 md:grid-cols-2 gap-6">
+    
+    <!-- Kolom Kiri: Gambar -->
+    <div class="h-64 sm:h-80 md:h-auto flex justify-center items-center p-4">
+      <img src="sertif akre.jpg" 
+           alt="Sertifikat Akreditasi" 
+           class="w-full h-full object-contain rounded-lg" />
+    </div>
+
+    <!-- Kolom Kanan: Konten -->
+    <div class="bg-gradient-to-br from-green-200 via-green-300 to-green-400 text-gray-900 flex flex-col justify-center p-6 sm:p-8 md:p-12 space-y-4 md:space-y-6">
+      <h2 class="text-2xl sm:text-3xl md:text-5xl font-extrabold leading-snug md:leading-tight text-green-900 border-b-4 border-green-700 pb-2">
+        AKREDITASI KLINIK UTAMA DIAGNOSA
+      </h2>
+      <p class="text-base sm:text-lg md:text-xl leading-relaxed">
+        Klinik Utama Diagnosa telah Lulus Akreditasi Tingkat 
+        <span class="font-extrabold text-green-800 bg-white/40 px-2 py-1 rounded-lg">⭐ PARIPURNA ⭐</span> 
+        sesuai dengan Standar Akreditasi Kementerian Kesehatan (STARKES) 
+        Republik Indonesia pada Tahun <span class="font-bold text-green-900 underline">2024</span>.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Sertifikat ISO -->
+ <div class="max-w-6xl mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
+
+  <!-- Konten Kiri -->
+  <div class="bg-gradient-to-br from-blue-100 via-blue-200 to-blue-300 text-gray-900 flex flex-col justify-center p-4 sm:p-6 md:p-12 space-y-4 sm:space-y-5 md:space-y-6">
+    <h2 class="text-2xl sm:text-3xl md:text-5xl font-extrabold leading-snug sm:leading-snug md:leading-tight text-blue-900 border-b-4 border-blue-500 pb-2 md:pb-3">
+      SERTIFIKAT ISO 9001:2015
+    </h2>
+    <p class="text-sm sm:text-base md:text-lg leading-relaxed">
+      Klinik Utama Diagnosa juga telah memperoleh 
+      <span class="font-bold text-blue-900">Sertifikasi ISO 9001:2015</span>, 
+      sebagai standar internasional untuk sistem manajemen mutu. 
+      Hal ini menunjukkan komitmen kami dalam memberikan pelayanan 
+      kesehatan yang <span class="font-semibold">konsisten, aman, 
+      dan berkualitas tinggi</span>.
+    </p>
+    <ul class="list-disc pl-5 sm:pl-6 md:pl-6 text-sm sm:text-base md:text-lg space-y-1 sm:space-y-2">
+      <li>Penerapan standar mutu internasional</li>
+      <li>Peningkatan pelayanan secara berkesinambungan</li>
+      <li>Kepercayaan lebih dari masyarakat & mitra</li>
+    </ul>
+  </div>
+
+  <!-- Gambar Kanan -->
+  <div class="flex items-center justify-center bg-gray-50 p-4 sm:p-6 md:p-8">
+    <img src="SERTIFIKAT iso.jpg" 
+         alt="Sertifikat ISO 9001:2015" 
+         class="w-full max-h-[350px] sm:max-h-[450px] md:max-h-[600px] object-contain rounded-lg shadow-md" />
+  </div>
+</div>
+</section>
+
+<section class="partner-section">
+  <div class="section-heading">
+  <h4 class="subtitle">KLINIK UTAMA DIAGNOSA</h4>
+  <h2 class="title-main">
+    <span class="line1">Rekanan Perusahaan</span>
+    <span class="line2"> Check Up</span>
+  </h2>
+</div>
+  <div class="partner-grid">
+    <img src="pertamina ep.png" alt="Pertamina EP">
+    <img src="pertamina ru vi.png" alt="Pertamina RU VI">
+    <img src="logo jkb.png" alt="JKB">
+    <img src="logo kbj.png" alt="KBJ">
+    <img src="logo ksi.png" alt="KSI">
+    <img src="logo mis.png" alt="MIS">
+    <img src="logo rs hasna medika.png" alt="RS Hasna Medika">
+    <img src="logo rs patrol.png" alt="RS Patrol">
+    <img src="logo rsud imyu.png" alt="RSUD IMYU">
+    <img src="logo yayasan darul maarif .png" alt="Yayasan Darul Maarif">
+    <img src="MeindoElangIndah.png" alt="Meindo Elang Indah">
+    <img src="logo_tri.png" alt="Tri">
+    <img src="mulia.png" alt="Mulia">
+    <img src="medika.png" alt="Medika">
+    <img src="PTAgrinas.png" alt="PT Agrinas">
+  </div>
+
+  <h2 class="title-footer">Dan Beberapa Perusahaan Lainnya-</h2>
+</section>
+
+<section>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@500&display=swap" rel="stylesheet">
+
+<style>
+.partner-section {
+  background: #f9f9f9;  /* kasih abu tipis biar section beda */
+  width: 100%;
+  padding: 60px 20px;   /* padding lebih lega */
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Subtitle */
+.subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #0077b6;
+  letter-spacing: 6px;   /* jarak antar huruf */
+  margin-bottom: 18px;   /* jarak ke judul */
+  text-transform: uppercase;
+}
+
+/* Judul Utama (2 baris biru + hijau) */
+.title-main {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 1000;
+  line-height: 1.2;
+  margin-bottom: 50px;
+  position: relative;
+  display: inline-block;
+}
+
+/* Garis dekoratif */
+.title-main::after {
+  content: "";
+  display: block;
+  width: 120px;  /* panjang garis */
+  height: 4px;   /* tebal garis */
+  background: linear-gradient(90deg, #0077b6, #00a86b); /* gradient biru-hijau */
+  border-radius: 2px;
+  margin: 14px auto 0;
+}
+
+.title-main .line1 {
+  display: block;
+  font-size: 2.8rem;
+  color: #0077b6; /* Biru */
+}
+
+.title-main .line2 {
+  display: block;
+  font-size: 2.4rem;
+  color: #00a86b; /* Hijau */
+}
+
+/* Subjudul (opsional) */
+.title-sub {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Judul Penutup */
+.title-footer {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #444;
+  margin-top: 50px;
+}
+
+/* Grid Logo */
+.partner-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* Desktop: 5 kolom */
+  gap: 0; /* rapet banget */
+  align-items: center;
+  justify-items: center;
+  margin-top: 10px;
+}
+
+.partner-grid img {
+  max-height: 100px;  /* gedein logo */
+  width: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.partner-grid img:hover {
+  transform: scale(1.15);
+  filter: brightness(1.1);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  border-radius: 10px;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .partner-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+}
+
+/* HP */
+@media (max-width: 768px) {
+  .title-main .line1 {
+    font-size: 2.2rem;
+  }
+  .title-main .line2 {
+    font-size: 1.9rem;
+  }
+  .partner-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+/* HP kecil banget */
+@media (max-width: 480px) {
+  .title-main .line1 {
+    font-size: 1.8rem;
+  }
+  .title-main .line2 {
+    font-size: 1.5rem;
+  }
+  .partner-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+</style>
+
+ <section class="py-8 bg-green-50">
+  <div class="section-heading text-center mb-6">
+    <h2 class="title-main text-4xl font-extrabold mt-2">
+      <span class="bg-gradient-to-r from-blue-600 to-green-500 bg-clip-text text-transparent">
+        Fasilitas Klinik
+      </span>
+    </h2>
+  </div>
+
+  <section class="py-8 bg-green-50">
    <div class="max-w-6xl mx-auto overflow-hidden">
     <div class="flex animate-slide gap-x-6"> <!-- Tambah gap-x-6 -->
       <!-- Konten asli -->
@@ -56,3 +592,249 @@
     </div>
   </div>
 </section>
+
+<style>
+@keyframes slide {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-100%); } /* geser penuh ke batch duplikat */
+}
+
+.animate-slide {
+  display: flex;
+  flex-wrap: nowrap;
+  animation: slide 25s linear infinite; /* ganti 25s → makin cepat/lambat */
+}
+</style>
+
+<script>
+  function sendToWhatsApp() {
+    let nama = document.getElementById("nama").value;
+    let alamat = document.getElementById("alamat").value;
+    let telepon = document.getElementById("telepon").value;
+    let pelayanan = document.getElementById("pelayanan").value;
+    let date = document.getElementById("date").value;
+    let message = document.getElementById("message").value;
+
+    if (nama === "" || alamat === "" || telepon === "" || pelayanan === "" || date === "" || message === "") {
+      alert("Mohon isi semua field sebelum mengirim.");
+      return;
+    }
+
+    let text = `Halo, saya ingin mendaftar konsultasi.%0A%0A Nama: ${nama}%0A Alamat: ${alamat}%0A Telepon: ${telepon}%0A Pelayanan: ${pelayanan}%0A Tanggal: ${date}%0A Pesan: ${message}`;
+
+    let phone = "6282130471300"; 
+    let url = `https://wa.me/${phone}?text=${text}`;
+    
+    window.open(url, "_blank");
+  }
+</script>
+    </form>
+  </div>
+</section>
+
+  <!-- Contact Section -->
+  <section class="bg-white py-20">
+   <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-12">
+    <div class="animate-fadeInLeft">
+     <h2 class="text-3xl font-bold text-green-900 mb-6">
+      Hubungi Kami
+     </h2>
+     <p class="text-green-900 mb-6">
+      Punya pertanyaan atau butuh bantuan? Hubungi kami dan kami akan dengan senang hati membantu Anda.
+     </p>
+     <ul class="space-y-4 text-green-900">
+      <li class="flex items-center space-x-4">
+       <i class="fas fa-map-marker-alt text-green-800 text-xl"></i>
+       <span>Jl. Raya Bar. Karangampel, Karangampel Kidul, Kec. Karangampel, Kabupaten Indramayu, Jawa Barat 45283</span>
+      </li>
+      <li class="flex items-center space-x-4">
+  <i class="fab fa-whatsapp text-green-800 text-xl"></i>
+  <a href="https://wa.me/6282130471300" target="_blank" class="hover:underline">
+    +62 821-3047-1300
+  </a>
+</li>
+      <li class="flex items-center space-x-4">
+  <i class="fab fa-instagram text-green-800 text-xl"></i>
+  <a href="https://www.instagram.com/klinikutamadiagnosa?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="hover:underline">
+    Instagram
+  </a>
+</li>
+
+</li>
+
+      <div class="bg-green-100 p-4 rounded-lg text-green-900">
+  <p><strong>Jam Operasional:</strong></p>
+  Senin  : 07.00 – 20.00<br>
+  Selasa : 07.00 – 20.00<br>
+  Rabu   : 07.00 – 20.00<br>
+  Kamis  : 07.00 – 20.00<br>
+  Jumat  : 07.00 – 20.00<br>
+  Sabtu  : 07.00 – 20.00<br>
+  Minggu & Tanggal Merah : Libur
+</div>
+
+        </span> 
+      </li>
+     </ul>
+    </div>
+    <div class="animate-fadeInRight">
+      <!-- Ganti img jadi Google Maps -->
+      <iframe 
+src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.4389023527674!2d108.44622500000001!3d-6.465950599999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6eea6b4f1176cb%3A0xc765ee3c71e5b67e!2sDiagnosa%20Laboratorium%20Klinik%20Karangampel!5e0!3m2!1sid!2sid!4v1757510084647!5m2!1sid!2sid"       
+ width="600" 
+        height="400" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade"
+        class="rounded-lg shadow-lg w-full h-[400px]">
+      </iframe>
+      <a href="https://maps.app.goo.gl/bziTSQyAwem8QfLg8?g_st=ipc" target="_blank" 
+   class="mt-4 inline-block bg-white text-green-900 px-4 py-2 rounded-lg shadow">
+   Buka di Google Maps
+</a>
+
+    </div>
+   </div>
+  </section>
+
+  <!-- Footer -->
+ <footer class="bg-green-800 text-white py-10">
+  <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
+    
+   <div class="flex-shrink-0">
+      <img src="icon tanpa bag.png" 
+           alt="Logo Klinik" 
+           class="w-32 md:w-40 lg:w-48 h-auto object-contain mr-6">
+    </div>
+
+    <!-- Quick Links -->
+    <div>
+      <h2 class="text-xl font-bold mb-4">Quick Links</h2>
+      <ul class="space-y-2">
+        <li><a href="index.html" class="hover:underline">Home</a></li>
+        <li><a href="#tentang" class="hover:underline">Tentang Kami</a></li>
+        <li><a href="#layanan" class="hover:underline">Layanan</a></li>
+        <li><a href="https://wa.me/6282130471300" class="hover:underline">Hubungi Kami</a></li>
+      </ul>
+    </div>
+
+    <!-- Follow Us -->
+    <div>
+      <h2 class="text-xl font-bold mb-4">Follow Us</h2>
+      <div class="flex space-x-4">
+        <a href="https://instagram.com" target="_blank" class="hover:text-yellow-400">
+          <i class="fab fa-instagram text-2xl"></i>
+        </a>
+        <a href="https://wa.me/6282130471300" target="_blank" class="hover:text-yellow-400">
+          <i class="fab fa-whatsapp text-2xl"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Copyright -->
+  <div class="text-center text-sm mt-10">
+    © 2025 Klinik Utama Diagnosa
+  </div>
+</footer>
+
+  <!-- SCRIPT -->
+  <script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Mobile services dropdown toggle
+    const mobileServicesBtn = document.getElementById('mobile-services-btn');
+    const mobileServicesMenu = document.getElementById('mobile-services-menu');
+    mobileServicesBtn.addEventListener('click', () => {
+      const expanded = mobileServicesBtn.getAttribute('aria-expanded') === 'true';
+      mobileServicesBtn.setAttribute('aria-expanded', !expanded);
+      mobileServicesMenu.classList.toggle('hidden');
+    });
+
+    // Desktop services dropdown toggle with animation
+    const servicesBtn = document.getElementById('services-btn');
+    const servicesMenu = servicesBtn.nextElementSibling;
+
+    function openDropdown() {
+      servicesMenu.classList.remove('opacity-0', 'invisible', 'scale-95');
+      servicesMenu.classList.add('opacity-100', 'visible', 'scale-100');
+      servicesBtn.setAttribute('aria-expanded', 'true');
+    }
+    function closeDropdown() {
+      servicesMenu.classList.add('opacity-0', 'invisible', 'scale-95');
+      servicesMenu.classList.remove('opacity-100', 'visible', 'scale-100');
+      servicesBtn.setAttribute('aria-expanded', 'false');
+    }
+
+    servicesBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (servicesBtn.getAttribute('aria-expanded') === 'true') {
+        closeDropdown();
+      } else {
+        openDropdown();
+      }
+    });
+
+    // Close desktop dropdown when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!servicesBtn.contains(e.target) && !servicesMenu.contains(e.target)) {
+        closeDropdown();
+      }
+    });
+
+    // Close mobile menu and dropdown on window resize if desktop
+    window.addEventListener('resize', () => {
+      if(window.innerWidth >= 768){
+        mobileMenu.classList.add('hidden');
+        mobileServicesMenu.classList.add('hidden');
+        mobileServicesBtn.setAttribute('aria-expanded', 'false');
+        closeDropdown();
+      }
+    });
+
+    // Hero image slideshow
+    const heroImages = [
+      {
+        src: "bagian depan 2.jpg",
+        alt: "A friendly doctor consulting with a patient in a modern clinic room with medical equipment"
+      },
+      {
+        src: "bagian depan.jpg",
+        alt: "Doctor using modern technology and digital tablet in a futuristic medical environment"
+      },
+      {
+        src: "bagian depan 3.jpg",
+        alt: "A friendly doctor consulting with a patient in a modern clinic room with medical equipment"
+      }
+    ];
+
+    let currentHeroIndex = 0;
+    const heroImageElement = document.getElementById('hero-image');
+
+    function changeHeroImage() {
+      currentHeroIndex = (currentHeroIndex + 1) % heroImages.length;
+      // Fade out
+      heroImageElement.style.opacity = 0;
+      setTimeout(() => {
+        heroImageElement.src = heroImages[currentHeroIndex].src;
+        heroImageElement.alt = heroImages[currentHeroIndex].alt;
+        // Fade in
+        heroImageElement.style.opacity = 1;
+      }, 500);
+    }
+
+    setInterval(changeHeroImage, 5000);
+  </script>
+</body>
+</html>
+
+ </body></html>
+
+
+
