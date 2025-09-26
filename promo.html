@@ -233,286 +233,355 @@
   <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto px-4 sm:px-6">
   
     <!-- Paket Hemat -->
-    <div class="bg-white rounded-xl shadow-2xl relative pb-12">
+    <div class="bg-white rounded-xl shadow-2xl flex flex-col">
       <div class="bg-green-500 text-white text-lg font-bold py-3 text-center shadow-md rounded-t-xl">
         Paket Hemat
       </div>
-      <ul class="p-6 text-gray-700 text-sm space-y-3">
+      <ul class="p-6 text-gray-700 text-sm space-y-3 flex-1">
         <li class="flex items-center"><span class="check-circle bg-green-500"></span>Hematologi Rutin</li>
         <li class="flex items-center"><span class="check-circle bg-green-500"></span>Gula Darah Sewaktu</li>
         <li class="flex items-center"><span class="check-circle bg-green-500"></span>Cholesterol Total</li>
         <li class="flex items-center"><span class="check-circle bg-green-500"></span>Trigliserida</li>
         <li class="flex items-center"><span class="check-circle bg-green-500"></span>Asam Urat</li>
       </ul>
-      <!-- Harga -->
-      <div class="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-[-10%]">
-        <button onclick="isiFormPendaftaran('Hemat', 241000)" 
-                class="bg-blue-800 hover:bg-blue-900 text-white px-6 py-2 rounded-full shadow-lg transition block text-center">
+      <div class="mt-auto flex justify-center items-center gap-3 pb-6">
+        <div class="bg-blue-800 text-white px-6 py-2 rounded-full shadow-lg text-center">
           <p class="line-through text-gray-300 text-xs">Rp 283.000,-</p>
           <p class="flex items-baseline justify-center gap-1">
             <span class="text-base">Rp</span>
             <span class="text-2xl font-extrabold">241.000,-</span>
           </p>
+        </div>
+        <button  class="toggleBtn bg-blue-800 text-white px-5 py-3 rounded-full shadow-lg 
+                 transition-colors duration-300 transform hover:scale-110 text-xl font-bold
+                 hover:bg-yellow-400 hover:text-blue-900"
+                data-paket="Hemat"
+                data-harga="Rp 241.000,-">
+          +
         </button>
       </div>
     </div>
 
     <!-- Paket Mini -->
-    <div class="bg-white rounded-xl shadow-2xl relative pb-12">
+    <div class="bg-white rounded-xl shadow-2xl flex flex-col">
       <div class="bg-yellow-500 text-white text-lg font-bold py-3 text-center shadow-md rounded-t-xl">
         Paket Mini
       </div>
-      <ul class="p-6 text-gray-700 text-sm space-y-3">
+      <ul class="p-6 text-gray-700 text-sm space-y-3 flex-1">
         <li class="flex items-center"><span class="check-circle bg-yellow-500"></span>Hematologi Lengkap</li>
         <li class="flex items-center"><span class="check-circle bg-yellow-500"></span>Urine Lengkap</li>
         <li class="flex items-center"><span class="check-circle bg-yellow-500"></span>Rontgen Thorax</li>
       </ul>
-      <!-- Harga -->
-      <div class="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-[-10%]">
-        <button onclick="isiFormPendaftaran('Mini', 230000)" 
-                class="bg-blue-800 hover:bg-blue-900 text-white px-6 py-2 rounded-full shadow-lg transition block text-center">
+      <div class="mt-auto flex justify-center items-center gap-3 pb-6">
+        <div class="bg-blue-800 text-white px-6 py-2 rounded-full shadow-lg text-center">
           <p class="line-through text-gray-300 text-xs">Rp 285.000,-</p>
           <p class="flex items-baseline justify-center gap-1">
             <span class="text-base">Rp</span>
             <span class="text-2xl font-extrabold">230.000,-</span>
           </p>
+        </div>
+        <button  class="toggleBtn bg-blue-800 text-white px-5 py-3 rounded-full shadow-lg 
+                 transition-colors duration-300 transform hover:scale-110 text-xl font-bold
+                 hover:bg-yellow-400 hover:text-blue-900"
+                data-paket="Mini"
+                data-harga="Rp 230.000,-">
+          +
         </button>
       </div>
     </div>
 
     <!-- Paket Paru Sehat -->
-    <div class="bg-white rounded-xl shadow-2xl relative pb-12">
+    <div class="bg-white rounded-xl shadow-2xl flex flex-col">
       <div class="bg-red-500 text-white text-lg font-bold py-3 text-center shadow-md rounded-t-xl">
         Paket Paru Sehat
       </div>
-      <ul class="p-6 text-gray-700 text-sm space-y-3">
+      <ul class="p-6 text-gray-700 text-sm space-y-3 flex-1">
         <li class="flex items-center"><span class="check-circle bg-red-500"></span>Hematologi Lengkap</li>
         <li class="flex items-center"><span class="check-circle bg-red-500"></span>Rontgen Thorax</li>
       </ul>
-      <!-- Harga -->
-      <div class="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-[-10%]">
-        <button onclick="isiFormPendaftaran('Paru Sehat', 178000)" 
-                class="bg-blue-800 hover:bg-blue-900 text-white px-6 py-2 rounded-full shadow-lg transition block text-center">
+      <div class="mt-auto flex justify-center items-center gap-3 pb-6">
+        <div class="bg-blue-800 text-white px-6 py-2 rounded-full shadow-lg text-center">
           <p class="line-through text-gray-300 text-xs">Rp 250.000,-</p>
           <p class="flex items-baseline justify-center gap-1">
             <span class="text-base">Rp</span>
             <span class="text-2xl font-extrabold">178.000,-</span>
           </p>
+        </div>
+        <button  class="toggleBtn bg-blue-800 text-white px-5 py-3 rounded-full shadow-lg 
+                 transition-colors duration-300 transform hover:scale-110 text-xl font-bold
+                 hover:bg-yellow-400 hover:text-blue-900"
+                data-paket="Paru Sehat"
+                data-harga="Rp 178.000,-">
+          +
         </button>
       </div>
     </div>
-
-    <!-- Paket MCU LPK Hanaman -->
-    <div class="bg-white rounded-xl shadow-2xl relative pb-12">
+    <div class="bg-white rounded-xl shadow-2xl flex flex-col">
       <div class="bg-purple-500 text-white text-lg font-bold py-3 text-center shadow-md rounded-t-xl">
         Paket MCU LPK Hanaman
       </div>
-      <ul class="p-6 text-gray-700 text-sm space-y-3">
-        <li class="flex items-center"><span class="check-circle bg-purple-500"></span>HBSag (Stick)</li>
+      <ul class="p-6 text-gray-700 text-sm space-y-3 flex-1">
+        <li class="flex items-center"><span class="check-circle bg-purple-500"></span>HBsAg (Stick)</li>
         <li class="flex items-center"><span class="check-circle bg-purple-500"></span>Pemeriksaan Fisik</li>
         <li class="flex items-center"><span class="check-circle bg-purple-500"></span>EKG</li>
         <li class="flex items-center"><span class="check-circle bg-purple-500"></span>Rontgen Thorax</li>
       </ul>
-      <!-- Harga -->
-      <div class="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-[-10%]">
-        <button onclick="isiFormPendaftaran('LPK Hanaman', 300000)" 
-                class="bg-blue-800 hover:bg-blue-900 text-white px-6 py-2 rounded-full shadow-lg transition block text-center">
+      <div class="mt-auto flex justify-center items-center gap-3 pb-6">
+        <div class="bg-blue-800 text-white px-6 py-2 rounded-full shadow-lg text-center">
           <p class="flex items-baseline justify-center gap-1">
             <span class="text-base">Rp</span>
             <span class="text-2xl font-extrabold">300.000,-</span>
           </p>
+        </div>
+        <button 
+          class="toggleBtn bg-blue-800 text-white px-5 py-3 rounded-full shadow-lg 
+                 transition-colors duration-300 transform hover:scale-110 text-xl font-bold
+                 hover:bg-yellow-400 hover:text-blue-900"
+          data-paket="LPK Hanaman"
+          data-harga="Rp 300.000,-">
+          +
         </button>
       </div>
     </div>
 
-    <!-- Paket Hemat (Biru) -->
-    <div class="bg-white rounded-xl shadow-2xl relative pb-12">
+    <!-- Paket MCU BKK NU -->
+    <div class="bg-white rounded-xl shadow-2xl flex flex-col">
       <div class="bg-blue-500 text-white text-lg font-bold py-3 text-center shadow-md rounded-t-xl">
         Paket MCU BKK NU
       </div>
-      <ul class="p-6 text-gray-700 text-sm space-y-3">
+      <ul class="p-6 text-gray-700 text-sm space-y-3 flex-1">
         <li class="flex items-center"><span class="check-circle bg-blue-300"></span>Hematologi Lengkap</li>
         <li class="flex items-center"><span class="check-circle bg-blue-300"></span>Urine Lengkap</li>
         <li class="flex items-center"><span class="check-circle bg-blue-300"></span>Thorax</li>
-        </ul>
-      <!-- Harga -->
-      <div class="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-[-10%]">
-        <button onclick="isiFormPendaftaran('MCU BKK NU', 160000)" 
-                class="bg-blue-800 hover:bg-blue-900 text-white px-6 py-2 rounded-full shadow-lg transition block text-center">
+      </ul>
+      <div class="mt-auto flex justify-center items-center gap-3 pb-6">
+        <div class="bg-blue-800 text-white px-6 py-2 rounded-full shadow-lg text-center">
           <p class="line-through text-gray-300 text-xs">Rp 210.000,-</p>
           <p class="flex items-baseline justify-center gap-1">
             <span class="text-base">Rp</span>
             <span class="text-2xl font-extrabold">160.000,-</span>
           </p>
+        </div>
+        <button 
+          class="toggleBtn bg-blue-800 text-white px-5 py-3 rounded-full shadow-lg 
+                 transition-colors duration-300 transform hover:scale-110 text-xl font-bold
+                 hover:bg-yellow-400 hover:text-blue-900"
+          data-paket="MCU BKK NU"
+          data-harga="Rp 160.000,-">
+          +
         </button>
       </div>
     </div>
 
     <!-- Paket Hati Lengkap -->
-    <div class="bg-white rounded-xl shadow-2xl relative pb-12">
+    <div class="bg-white rounded-xl shadow-2xl flex flex-col">
       <div class="bg-teal-800 text-white text-lg font-bold py-3 text-center shadow-md rounded-t-xl">
         Paket Hati Lengkap
       </div>
-      <ul class="p-6 text-gray-700 text-sm space-y-3">
+      <ul class="p-6 text-gray-700 text-sm space-y-3 flex-1">
         <li class="flex items-center"><span class="check-circle bg-teal-800"></span>Bilirubin</li>
         <li class="flex items-center"><span class="check-circle bg-teal-800"></span>Bilirubin Total</li>
         <li class="flex items-center"><span class="check-circle bg-teal-800"></span>SGOT</li>
         <li class="flex items-center"><span class="check-circle bg-teal-800"></span>SGPT</li>
-        <li class="flex items-center"><span class="check-circle bg-teal-800"></span>HBSag (Stick)</li>
+        <li class="flex items-center"><span class="check-circle bg-teal-800"></span>HBsAg (Stick)</li>
       </ul>
-      <!-- Harga -->
-      <div class="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-[-10%]">
-        <button onclick="isiFormPendaftaran('Hati Lengkap', 300000)" 
-                class="bg-blue-800 hover:bg-blue-900 text-white px-6 py-2 rounded-full shadow-lg transition block text-center">
+      <div class="mt-auto flex justify-center items-center gap-3 pb-6">
+        <div class="bg-blue-800 text-white px-6 py-2 rounded-full shadow-lg text-center">
           <p class="flex items-baseline justify-center gap-1">
             <span class="text-base">Rp</span>
             <span class="text-2xl font-extrabold">300.000,-</span>
           </p>
+        </div>
+        <button 
+          class="toggleBtn bg-blue-800 text-white px-5 py-3 rounded-full shadow-lg 
+                 transition-colors duration-300 transform hover:scale-110 text-xl font-bold
+                 hover:bg-yellow-400 hover:text-blue-900"
+          data-paket="Hati Lengkap"
+          data-harga="Rp 300.000,-">
+          +
         </button>
       </div>
     </div>
-
-    <!-- Paket Jantung -->
-    <div class="bg-white rounded-xl shadow-2xl relative pb-12">
+   <div class="bg-white rounded-xl shadow-2xl flex flex-col">
       <div class="bg-yellow-500 text-white text-lg font-bold py-3 text-center shadow-md rounded-t-xl">
         Paket Jantung
       </div>
-      <ul class="p-6 text-gray-700 text-sm space-y-3">
+      <ul class="p-6 text-gray-700 text-sm space-y-3 flex-1">
         <li class="flex items-center"><span class="check-circle bg-yellow-500"></span>Hematologi Rutin</li>
         <li class="flex items-center"><span class="check-circle bg-yellow-500"></span>Cholesterol Lengkap</li>
         <li class="flex items-center"><span class="check-circle bg-yellow-500"></span>EKG</li>
       </ul>
-      <!-- Harga -->
-      <div class="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-[-10%]">
-        <button onclick="isiFormPendaftaran('Jantung', 325000)" 
-                class="bg-blue-800 hover:bg-blue-900 text-white px-6 py-2 rounded-full shadow-lg transition block text-center">
+      <div class="mt-auto flex justify-center items-center gap-3 pb-6">
+        <div class="bg-blue-800 text-white px-6 py-2 rounded-full shadow-lg text-center">
           <p class="flex items-baseline justify-center gap-1">
             <span class="text-base">Rp</span>
             <span class="text-2xl font-extrabold">325.000,-</span>
           </p>
+        </div>
+        <button 
+          class="toggleBtn bg-blue-800 text-white px-5 py-3 rounded-full shadow-lg 
+                 transition-colors duration-300 transform hover:scale-110 text-xl font-bold
+                 hover:bg-yellow-400 hover:text-blue-900"
+          data-paket="Jantung"
+          data-harga="Rp 325.000,-">
+          +
         </button>
       </div>
     </div>
 
     <!-- Paket Ginjal -->
-    <div class="bg-white rounded-xl shadow-2xl relative pb-12">
+    <div class="bg-white rounded-xl shadow-2xl flex flex-col">
       <div class="bg-red-500 text-white text-lg font-bold py-3 text-center shadow-md rounded-t-xl">
-        Paket Ginjal 
+        Paket Ginjal
       </div>
-      <ul class="p-6 text-gray-700 text-sm space-y-3">
+      <ul class="p-6 text-gray-700 text-sm space-y-3 flex-1">
         <li class="flex items-center"><span class="check-circle bg-red-500"></span>Hematologi Rutin</li>
         <li class="flex items-center"><span class="check-circle bg-red-500"></span>Ureum</li>
         <li class="flex items-center"><span class="check-circle bg-red-500"></span>Creatinin</li>
         <li class="flex items-center"><span class="check-circle bg-red-500"></span>Asam Urat</li>
         <li class="flex items-center"><span class="check-circle bg-red-500"></span>Urine Lengkap</li>
       </ul>
-      <!-- Harga -->
-      <div class="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-[-10%]">
-        <button onclick="isiFormPendaftaran('Ginjal', 217000)" 
-                class="bg-blue-800 hover:bg-blue-900 text-white px-6 py-2 rounded-full shadow-lg transition block text-center">
+      <div class="mt-auto flex justify-center items-center gap-3 pb-6">
+        <div class="bg-blue-800 text-white px-6 py-2 rounded-full shadow-lg text-center">
           <p class="flex items-baseline justify-center gap-1">
             <span class="text-base">Rp</span>
             <span class="text-2xl font-extrabold">217.000,-</span>
           </p>
+        </div>
+        <button 
+          class="toggleBtn bg-blue-800 text-white px-5 py-3 rounded-full shadow-lg 
+                 transition-colors duration-300 transform hover:scale-110 text-xl font-bold
+                 hover:bg-yellow-400 hover:text-blue-900"
+          data-paket="Ginjal"
+          data-harga="Rp 217.000,-">
+          +
         </button>
       </div>
     </div>
 
     <!-- Paket Hati -->
-    <div class="bg-white rounded-xl shadow-2xl relative pb-12">
+    <div class="bg-white rounded-xl shadow-2xl flex flex-col">
       <div class="bg-green-500 text-white text-lg font-bold py-3 text-center shadow-md rounded-t-xl">
         Paket Hati
       </div>
-      <ul class="p-6 text-gray-700 text-sm space-y-3">
+      <ul class="p-6 text-gray-700 text-sm space-y-3 flex-1">
         <li class="flex items-center"><span class="check-circle bg-green-500"></span>Bilirubin Total</li>
         <li class="flex items-center"><span class="check-circle bg-green-500"></span>SGOT</li>
         <li class="flex items-center"><span class="check-circle bg-green-500"></span>Creatinin</li>
         <li class="flex items-center"><span class="check-circle bg-green-500"></span>SGPT</li>
       </ul>
-      <!-- Harga -->
-      <div class="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-[-10%]">
-        <button onclick="isiFormPendaftaran('Hati', 123250)" 
-                class="bg-blue-800 hover:bg-blue-900 text-white px-6 py-2 rounded-full shadow-lg transition block text-center">
+      <div class="mt-auto flex justify-center items-center gap-3 pb-6">
+        <div class="bg-blue-800 text-white px-6 py-2 rounded-full shadow-lg text-center">
           <p class="flex items-baseline justify-center gap-1">
             <span class="text-base">Rp</span>
             <span class="text-2xl font-extrabold">123.250,-</span>
           </p>
+        </div>
+        <button 
+          class="toggleBtn bg-blue-800 text-white px-5 py-3 rounded-full shadow-lg 
+                 transition-colors duration-300 transform hover:scale-110 text-xl font-bold
+                 hover:bg-yellow-400 hover:text-blue-900"
+          data-paket="Hati"
+          data-harga="Rp 123.250,-">
+          +
         </button>
       </div>
     </div>
-    <div class="bg-white rounded-xl shadow-2xl relative pb-12">
-  <div class="bg-red-800 text-white text-lg font-bold py-3 text-center shadow-md rounded-t-xl">
-     Paket MCU Darul Ma'arif
+    <div class="bg-white rounded-xl shadow-2xl flex flex-col">
+      <div class="bg-red-800 text-white text-lg font-bold py-3 text-center shadow-md rounded-t-xl">
+        Paket MCU Darul Ma'arif
       </div>
-      <ul class="p-6 text-gray-700 text-sm space-y-3">
+      <ul class="p-6 text-gray-700 text-sm space-y-3 flex-1">
         <li class="flex items-center"><span class="check-circle bg-red-800"></span>Urine Lengkap</li>
         <li class="flex items-center"><span class="check-circle bg-red-800"></span>Narkoba 6P</li>
         <li class="flex items-center"><span class="check-circle bg-red-800"></span>Rontgen Thorax</li>
         <li class="flex items-center"><span class="check-circle bg-red-800"></span>SGPT</li>
       </ul>
-      <!-- Harga -->
-      <div class="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-[-10%]">
-        <button onclick="isiFormPendaftaran('Darul Maarif', 400000)" 
-                class="bg-blue-800 hover:bg-blue-900 text-white px-6 py-2 rounded-full shadow-lg transition block text-center">
-           <p class="line-through text-gray-300 text-xs">Rp 468.000,-</p>
+      <div class="mt-auto flex justify-center items-center gap-3 pb-6">
+        <div class="bg-blue-800 text-white px-6 py-2 rounded-full shadow-lg text-center">
+          <p class="line-through text-gray-300 text-xs">Rp 468.000,-</p>
           <p class="flex items-baseline justify-center gap-1">
             <span class="text-base">Rp</span>
             <span class="text-2xl font-extrabold">400.000,-</span>
           </p>
+        </div>
+        <button 
+          class="toggleBtn bg-blue-800 text-white px-5 py-3 rounded-full shadow-lg 
+                 transition-colors duration-300 transform hover:scale-110 text-xl font-bold
+                 hover:bg-yellow-400 hover:text-blue-900"
+          data-paket="MCU Darul Ma'arif"
+          data-harga="Rp 400.000,-">
+          +
         </button>
       </div>
     </div>
-    <div class="bg-white rounded-xl shadow-2xl relative pb-12">
+
+    <!-- Paket Diabet -->
+    <div class="bg-white rounded-xl shadow-2xl flex flex-col">
       <div class="bg-teal-800 text-white text-lg font-bold py-3 text-center shadow-md rounded-t-xl">
-       Paket Diabet
-  </div>
-  <ul class="p-6 text-gray-700 text-sm space-y-3">
-    <li class="flex items-center"><span class="check-circle bg-teal-800"></span>Gula Darah Puasa</li>
-    <li class="flex items-center"><span class="check-circle bg-teal-800"></span>Gula Darah 2 Jam PP</li>
-    <li class="flex items-center"><span class="check-circle bg-teal-800"></span>HBA1C</li>
-    <li class="flex items-center"><span class="check-circle bg-teal-800"></span>Urine Lengkap</li>
-  </ul>
-      <!-- Harga -->
-      <div class="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-[-10%]">
-        <button onclick="isiFormPendaftaran('Diabet', 330.000)" 
-                class="bg-blue-800 hover:bg-blue-900 text-white px-6 py-2 rounded-full shadow-lg transition block text-center">
-           <p class="line-through text-gray-300 text-xs">Rp 390.000,-</p>
+        Paket Diabet
+      </div>
+      <ul class="p-6 text-gray-700 text-sm space-y-3 flex-1">
+        <li class="flex items-center"><span class="check-circle bg-teal-800"></span>Gula Darah Puasa</li>
+        <li class="flex items-center"><span class="check-circle bg-teal-800"></span>Gula Darah 2 Jam PP</li>
+        <li class="flex items-center"><span class="check-circle bg-teal-800"></span>HBA1C</li>
+        <li class="flex items-center"><span class="check-circle bg-teal-800"></span>Urine Lengkap</li>
+      </ul>
+      <div class="mt-auto flex justify-center items-center gap-3 pb-6">
+        <div class="bg-blue-800 text-white px-6 py-2 rounded-full shadow-lg text-center">
+          <p class="line-through text-gray-300 text-xs">Rp 390.000,-</p>
           <p class="flex items-baseline justify-center gap-1">
             <span class="text-base">Rp</span>
             <span class="text-2xl font-extrabold">330.000,-</span>
           </p>
+        </div>
+        <button 
+          class="toggleBtn bg-blue-800 text-white px-5 py-3 rounded-full shadow-lg 
+                 transition-colors duration-300 transform hover:scale-110 text-xl font-bold
+                 hover:bg-yellow-400 hover:text-blue-900"
+          data-paket="Diabet"
+          data-harga="Rp 330.000,-">
+          +
         </button>
       </div>
     </div>
-   <div class="bg-white rounded-xl shadow-2xl relative pb-12">
+
+    <!-- Paket Diabet Lengkap -->
+    <div class="bg-white rounded-xl shadow-2xl flex flex-col">
       <div class="bg-purple-700 text-white text-lg font-bold py-3 text-center shadow-md rounded-t-xl">
         Paket Diabet Lengkap
       </div>
-      <ul class="p-6 text-gray-700 text-sm space-y-3">
-        <li class="flex items-center"><span class="check-circle bg-purple-700"></span> Hematologi Lengkap</li>
+      <ul class="p-6 text-gray-700 text-sm space-y-3 flex-1">
+        <li class="flex items-center"><span class="check-circle bg-purple-700"></span>Hematologi Lengkap</li>
         <li class="flex items-center"><span class="check-circle bg-purple-700"></span>Gula Darah Puasa</li>
         <li class="flex items-center"><span class="check-circle bg-purple-700"></span>GD 2 Jam PP</li>
         <li class="flex items-center"><span class="check-circle bg-purple-700"></span>Urine Lengkap</li>
-        <li class="flex items-center"><span class="check-circle bg-purple-700"></span> Cholesterol Lengkap</li>
+        <li class="flex items-center"><span class="check-circle bg-purple-700"></span>Cholesterol Lengkap</li>
         <li class="flex items-center"><span class="check-circle bg-purple-700"></span>Rontgen Thorax</li>
       </ul>
-      <!-- Harga -->
-      <div class="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-[-10%]">
-        <button onclick="isiFormPendaftaran('Diabet Lengkap', 483000)" 
-                class="bg-blue-800 hover:bg-blue-900 text-white px-6 py-2 rounded-full shadow-lg transition block text-center">
-           <p class="line-through text-gray-300 text-xs">Rp 535.000,-</p>
+      <div class="mt-auto flex justify-center items-center gap-3 pb-6">
+        <div class="bg-blue-800 text-white px-6 py-2 rounded-full shadow-lg text-center">
+          <p class="line-through text-gray-300 text-xs">Rp 535.000,-</p>
           <p class="flex items-baseline justify-center gap-1">
             <span class="text-base">Rp</span>
             <span class="text-2xl font-extrabold">483.000,-</span>
           </p>
+        </div>
+        <button 
+          class="toggleBtn bg-blue-800 text-white px-5 py-3 rounded-full shadow-lg 
+                 transition-colors duration-300 transform hover:scale-110 text-xl font-bold
+                 hover:bg-yellow-400 hover:text-blue-900"
+          data-paket="Diabet Lengkap"
+          data-harga="Rp 483.000,-">
+          +
         </button>
       </div>
     </div>
-     <div class="bg-white rounded-xl shadow-2xl relative pb-12">
+     <div class="bg-white rounded-xl shadow-2xl flex flex-col">
       <div class="bg-yellow-500 text-white text-lg font-bold py-3 text-center shadow-md rounded-t-xl">
-       Paket Perak
+        Paket Perak
       </div>
-      <ul class="p-6 text-gray-700 text-sm space-y-3">
+      <ul class="p-6 text-gray-700 text-sm space-y-3 flex-1">
         <li class="flex items-center"><span class="check-circle bg-yellow-500"></span>Hematologi Lengkap</li>
         <li class="flex items-center"><span class="check-circle bg-yellow-500"></span>Gula Darah Sewaktu / Puasa</li>
         <li class="flex items-center"><span class="check-circle bg-yellow-500"></span>Cholesterol Total</li>
@@ -523,45 +592,63 @@
         <li class="flex items-center"><span class="check-circle bg-yellow-500"></span>Urine Lengkap</li>
         <li class="flex items-center"><span class="check-circle bg-yellow-500"></span>Rontgen Thorax</li>
       </ul>
-      <!-- Harga -->
-      <div class="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-[-10%]">
-        <button onclick="isiFormPendaftaran('Perak', 470000)" 
-                class="bg-blue-800 hover:bg-blue-900 text-white px-6 py-2 rounded-full shadow-lg transition block text-center">
-           <p class="line-through text-gray-300 text-xs">Rp 553.000,-</p>
+      <!-- Harga + Tombol -->
+      <div class="mt-auto flex justify-center items-center gap-3 pb-6">
+        <div class="bg-blue-800 text-white px-6 py-2 rounded-full shadow-lg text-center">
+          <p class="line-through text-gray-300 text-xs">Rp 553.000,-</p>
           <p class="flex items-baseline justify-center gap-1">
             <span class="text-base">Rp</span>
             <span class="text-2xl font-extrabold">470.000,-</span>
           </p>
+        </div>
+        <button 
+          class="toggleBtn bg-blue-800 text-white px-5 py-3 rounded-full shadow-lg 
+                 transition-colors duration-300 transform hover:scale-110 text-xl font-bold
+                 hover:bg-yellow-400 hover:text-blue-900"
+          data-paket="Perak"
+          data-harga="Rp 470.000,-">
+          +
         </button>
       </div>
     </div>
-    <div class="bg-white rounded-xl shadow-2xl relative pb-12">
+
+    <!-- Paket Cholesterol -->
+    <div class="bg-white rounded-xl shadow-2xl flex flex-col">
       <div class="bg-green-500 text-white text-lg font-bold py-3 text-center shadow-md rounded-t-xl">
         Paket Cholesterol
       </div>
-      <ul class="p-6 text-gray-700 text-sm space-y-3">
-        <li class="flex items-center"><span class="check-circle bg-green-500"></span> Cholesterol Total</li>
+      <ul class="p-6 text-gray-700 text-sm space-y-3 flex-1">
+        <li class="flex items-center"><span class="check-circle bg-green-500"></span>Cholesterol Total</li>
         <li class="flex items-center"><span class="check-circle bg-green-500"></span>HDL Cholesterol</li>
         <li class="flex items-center"><span class="check-circle bg-green-500"></span>LDL Cholesterol</li>
         <li class="flex items-center"><span class="check-circle bg-green-500"></span>Trigliserida</li>
         <li class="flex items-center"><span class="check-circle bg-green-500"></span>Rasio Cholesterol Total dan HDL Cholesterol</li>
-         </ul>
-      <!-- Harga -->
-      <div class="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-[-10%]">
-        <button onclick="isiFormPendaftaran('Cholesterol', 210000)" 
-                class="bg-blue-800 hover:bg-blue-900 text-white px-6 py-2 rounded-full shadow-lg transition block text-center">
+      </ul>
+      <!-- Harga + Tombol -->
+      <div class="mt-auto flex justify-center items-center gap-3 pb-6">
+        <div class="bg-blue-800 text-white px-6 py-2 rounded-full shadow-lg text-center">
           <p class="flex items-baseline justify-center gap-1">
             <span class="text-base">Rp</span>
             <span class="text-2xl font-extrabold">210.000,-</span>
           </p>
+        </div>
+        <button 
+          class="toggleBtn bg-blue-800 text-white px-5 py-3 rounded-full shadow-lg 
+                 transition-colors duration-300 transform hover:scale-110 text-xl font-bold
+                 hover:bg-yellow-400 hover:text-blue-900"
+          data-paket="Cholesterol"
+          data-harga="Rp 210.000,-">
+          +
         </button>
       </div>
     </div>
-    <div class="bg-white rounded-xl shadow-2xl relative pb-12">
+
+    <!-- Paket Inti -->
+    <div class="bg-white rounded-xl shadow-2xl flex flex-col">
       <div class="bg-red-500 text-white text-lg font-bold py-3 text-center shadow-md rounded-t-xl">
         Paket Inti
       </div>
-      <ul class="p-6 text-gray-700 text-sm space-y-3">
+      <ul class="p-6 text-gray-700 text-sm space-y-3 flex-1">
         <li class="flex items-center"><span class="check-circle bg-red-500"></span>Hematologi Lengkap</li>
         <li class="flex items-center"><span class="check-circle bg-red-500"></span>Gula Darah Puasa Gula Darah 2 Jam PP</li>
         <li class="flex items-center"><span class="check-circle bg-red-500"></span>Ureum Creatinin</li>
@@ -571,24 +658,31 @@
         <li class="flex items-center"><span class="check-circle bg-red-500"></span>Urine Lengkap</li>
         <li class="flex items-center"><span class="check-circle bg-red-500"></span>Pemeriksaan Fisik</li>
         <li class="flex items-center"><span class="check-circle bg-red-500"></span>Rontgen Thorax</li>
-        <li class="flex items-center"><span class="check-circle bg-red-500"></span>Ekg</li>
+        <li class="flex items-center"><span class="check-circle bg-red-500"></span>EKG</li>
       </ul>
-      <!-- Harga -->
-      <div class="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-[-10%]">
-        <button onclick="isiFormPendaftaran('Inti', 970000)" 
-                class="bg-blue-800 hover:bg-blue-900 text-white px-6 py-2 rounded-full shadow-lg transition block text-center">
+      <!-- Harga + Tombol -->
+      <div class="mt-auto flex justify-center items-center gap-3 pb-6">
+        <div class="bg-blue-800 text-white px-6 py-2 rounded-full shadow-lg text-center">
           <p class="flex items-baseline justify-center gap-1">
             <span class="text-base">Rp</span>
             <span class="text-2xl font-extrabold">970.000,-</span>
           </p>
+        </div>
+        <button 
+          class="toggleBtn bg-blue-800 text-white px-5 py-3 rounded-full shadow-lg 
+                 transition-colors duration-300 transform hover:scale-110 text-xl font-bold
+                 hover:bg-yellow-400 hover:text-blue-900"
+          data-paket="Inti"
+          data-harga="Rp 970.000,-">
+          +
         </button>
       </div>
     </div>
-<div class="bg-white rounded-xl shadow-2xl relative pb-12">
+<div class="bg-white rounded-xl shadow-2xl flex flex-col">
       <div class="bg-purple-700 text-white text-lg font-bold py-3 text-center shadow-md rounded-t-xl">
         Paket HSE
       </div>
-      <ul class="p-6 text-gray-700 text-sm space-y-3">
+      <ul class="p-6 text-gray-700 text-sm space-y-3 flex-1">
         <li class="flex items-center"><span class="check-circle bg-purple-700"></span>Hematologi Lengkap</li>
         <li class="flex items-center"><span class="check-circle bg-purple-700"></span>Gula Darah Puasa Gula Darah 2 Jam PP</li>
         <li class="flex items-center"><span class="check-circle bg-purple-700"></span>Ureum Creatinin</li>
@@ -599,25 +693,34 @@
         <li class="flex items-center"><span class="check-circle bg-purple-700"></span>Asam Urat</li>
         <li class="flex items-center"><span class="check-circle bg-purple-700"></span>Pemeriksaan Fisik</li>
         <li class="flex items-center"><span class="check-circle bg-purple-700"></span>Rontgen Thorax</li>
-        <li class="flex items-center"><span class="check-circle bg-purple-700"></span>Ekg</li>
+        <li class="flex items-center"><span class="check-circle bg-purple-700"></span>EKG</li>
       </ul>
-      <!-- Harga -->
-      <div class="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-[-10%]">
-        <button onclick="isiFormPendaftaran('HSE', 1020000)" 
-                class="bg-blue-800 hover:bg-blue-900 text-white px-6 py-2 rounded-full shadow-lg transition block text-center">
-         <p class="line-through text-gray-300 text-xs">Rp 1.080.000,-</p>
+      <!-- Harga + Tombol -->
+      <div class="mt-auto flex justify-center items-center gap-3 pb-6">
+        <div class="bg-blue-800 text-white px-6 py-2 rounded-full shadow-lg text-center">
+          <p class="line-through text-gray-300 text-xs">Rp 1.080.000,-</p>
           <p class="flex items-baseline justify-center gap-1">
             <span class="text-base">Rp</span>
             <span class="text-2xl font-extrabold">1.020.000,-</span>
           </p>
+        </div>
+        <button 
+          class="toggleBtn bg-blue-800 text-white px-5 py-3 rounded-full shadow-lg 
+                 transition-colors duration-300 transform hover:scale-110 text-xl font-bold
+                 hover:bg-yellow-400 hover:text-blue-900"
+          data-paket="HSE"
+          data-harga="Rp 1.020.000,-">
+          +
         </button>
       </div>
     </div>
-<div class="bg-white rounded-xl shadow-2xl relative pb-12">
-  <div class="bg-red-800 text-white text-lg font-bold py-3 text-center shadow-md rounded-t-xl">
-     Paket Check Up Bravo
+
+    <!-- Paket 2 -->
+    <div class="bg-white rounded-xl shadow-2xl flex flex-col">
+      <div class="bg-red-800 text-white text-lg font-bold py-3 text-center shadow-md rounded-t-xl">
+        Paket Check Up Bravo
       </div>
-      <ul class="p-6 text-gray-700 text-sm space-y-3">
+      <ul class="p-6 text-gray-700 text-sm space-y-3 flex-1">
         <li class="flex items-center"><span class="check-circle bg-red-800"></span>Hematologi Lengkap</li>
         <li class="flex items-center"><span class="check-circle bg-red-800"></span>Gula Darah Puasa Gula Darah 2 Jam PP</li>
         <li class="flex items-center"><span class="check-circle bg-red-800"></span>Ureum Creatinin</li>
@@ -627,27 +730,36 @@
         <li class="flex items-center"><span class="check-circle bg-red-800"></span>Urine Lengkap</li>
         <li class="flex items-center"><span class="check-circle bg-red-800"></span>Golongan Darah</li>
         <li class="flex items-center"><span class="check-circle bg-red-800"></span>Asam Urat</li>
-        <li class="flex items-center"><span class="check-circle bg-red-800"></span>HBSAg (Stick)</li>
+        <li class="flex items-center"><span class="check-circle bg-red-800"></span>HBsAg (Stick)</li>
         <li class="flex items-center"><span class="check-circle bg-red-800"></span>EKG</li>
         <li class="flex items-center"><span class="check-circle bg-red-800"></span>Rontgen Thorax</li>
       </ul>
-      <!-- Harga -->
-      <div class="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-[-10%]">
-        <button onclick="isiFormPendaftaran('Check Up Bravo', 1013000)" 
-                class="bg-blue-800 hover:bg-blue-900 text-white px-6 py-2 rounded-full shadow-lg transition block text-center">
+      <!-- Harga + Tombol -->
+      <div class="mt-auto flex justify-center items-center gap-3 pb-6">
+        <div class="bg-blue-800 text-white px-6 py-2 rounded-full shadow-lg text-center">
           <p class="line-through text-gray-300 text-xs">Rp 1.050.000,-</p>
           <p class="flex items-baseline justify-center gap-1">
             <span class="text-base">Rp</span>
             <span class="text-2xl font-extrabold">1.013.000,-</span>
           </p>
+        </div>
+        <button 
+          class="toggleBtn bg-blue-800 text-white px-5 py-3 rounded-full shadow-lg 
+                 transition-colors duration-300 transform hover:scale-110 text-xl font-bold
+                 hover:bg-yellow-400 hover:text-blue-900"
+          data-paket="Check Up Bravo"
+          data-harga="Rp 1.013.000,-">
+          +
         </button>
       </div>
     </div>
-    <div class="bg-white rounded-xl shadow-2xl relative pb-12">
+
+    <!-- Paket 3 -->
+    <div class="bg-white rounded-xl shadow-2xl flex flex-col">
       <div class="bg-teal-800 text-white text-lg font-bold py-3 text-center shadow-md rounded-t-xl">
-       Paket Check Up Cleo
+        Paket Check Up Cleo
       </div>
-      <ul class="p-6 text-gray-700 text-sm space-y-3">
+      <ul class="p-6 text-gray-700 text-sm space-y-3 flex-1">
         <li class="flex items-center"><span class="check-circle bg-teal-800"></span>Hematologi Lengkap</li>
         <li class="flex items-center"><span class="check-circle bg-teal-800"></span>Gula Darah Puasa</li>
         <li class="flex items-center"><span class="check-circle bg-teal-800"></span>Ureum Creatinin</li>
@@ -657,24 +769,32 @@
         <li class="flex items-center"><span class="check-circle bg-teal-800"></span>Urine Lengkap</li>
         <li class="flex items-center"><span class="check-circle bg-teal-800"></span>Asam Urat</li>
         <li class="flex items-center"><span class="check-circle bg-teal-800"></span>Rontgen Thorax</li>
-        <li class="flex items-center"><span class="check-circle bg-teal-800"></span>Ekg</li>
+        <li class="flex items-center"><span class="check-circle bg-teal-800"></span>EKG</li>
       </ul>
-      <!-- Harga -->
-      <div class="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-[-10%]">
-        <button onclick="isiFormPendaftaran('Check Up Cleo', 610000)" 
-                class="bg-blue-800 hover:bg-blue-900 text-white px-6 py-2 rounded-full shadow-lg transition block text-center">
+      <!-- Harga + Tombol -->
+      <div class="mt-auto flex justify-center items-center gap-3 pb-6">
+        <div class="bg-blue-800 text-white px-6 py-2 rounded-full shadow-lg text-center">
           <p class="flex items-baseline justify-center gap-1">
             <span class="text-base">Rp</span>
             <span class="text-2xl font-extrabold">610.000,-</span>
           </p>
+        </div>
+        <button 
+          class="toggleBtn bg-blue-800 text-white px-5 py-3 rounded-full shadow-lg 
+                 transition-colors duration-300 transform hover:scale-110 text-xl font-bold
+                 hover:bg-yellow-400 hover:text-blue-900"
+          data-paket="Check Up Cleo"
+          data-harga="Rp 610.000,-">
+          +
         </button>
       </div>
     </div>
-<div class="bg-white rounded-xl shadow-2xl relative pb-12">
+
+<div class="bg-white rounded-xl shadow-2xl flex flex-col">
       <div class="bg-red-500 text-white text-lg font-bold py-3 text-center shadow-md rounded-t-xl">
-       Paket Check Up Delight
+        Paket Check Up Delight
       </div>
-      <ul class="p-6 text-gray-700 text-sm space-y-3">
+      <ul class="p-6 text-gray-700 text-sm space-y-3 flex-1">
         <li class="flex items-center"><span class="check-circle bg-red-500"></span>Hematologi Lengkap</li>
         <li class="flex items-center"><span class="check-circle bg-red-500"></span>VDRL</li>
         <li class="flex items-center"><span class="check-circle bg-red-500"></span>TPHA</li>
@@ -685,57 +805,73 @@
         <li class="flex items-center"><span class="check-circle bg-red-500"></span>Cholesterol Total</li>
         <li class="flex items-center"><span class="check-circle bg-red-500"></span>Urine Lengkap</li>
         <li class="flex items-center"><span class="check-circle bg-red-500"></span>HIV Rapid</li>
-        <li class="flex items-center"><span class="check-circle bg-red-500"></span>HBSAg (Stick)</li>
+        <li class="flex items-center"><span class="check-circle bg-red-500"></span>HBsAg (Stick)</li>
         <li class="flex items-center"><span class="check-circle bg-red-500"></span>Rontgen Thorax</li>
       </ul>
-      <!-- Harga -->
-      <div class="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-[-10%]">
-        <button onclick="isiFormPendaftaran('Check Up Delight', 753000)" 
-                class="bg-blue-800 hover:bg-blue-900 text-white px-6 py-2 rounded-full shadow-lg transition block text-center">
+      <!-- Harga + Tombol -->
+      <div class="mt-4 flex justify-center items-center gap-3 pb-6">
+        <div class="bg-blue-800 text-white px-6 py-2 rounded-full shadow-lg text-center">
           <p class="flex items-baseline justify-center gap-1">
             <span class="text-base">Rp</span>
             <span class="text-2xl font-extrabold">753.000,-</span>
           </p>
+        </div>
+        <button 
+          class="toggleBtn bg-blue-800 text-white px-5 py-3 rounded-full shadow-lg 
+                 transition-colors duration-300 transform hover:scale-110 text-xl font-bold
+                 hover:bg-yellow-400 hover:text-blue-900"
+          data-paket="Check Up Delight"
+          data-harga="Rp 753.000,-">
+          +
         </button>
       </div>
-      </div>
-      <div class="bg-white rounded-xl shadow-2xl relative pb-12">
+    </div>
+
+    <!-- Paket 2 -->
+    <div class="bg-white rounded-xl shadow-2xl flex flex-col">
       <div class="bg-green-500 text-white text-lg font-bold py-3 text-center shadow-md rounded-t-xl">
-       Paket Emas
+        Paket Emas
       </div>
-      <ul class="p-6 text-gray-700 text-sm space-y-3">
+      <ul class="p-6 text-gray-700 text-sm space-y-3 flex-1">
         <li class="flex items-center"><span class="check-circle bg-green-500"></span>Hematologi Lengkap</li>
         <li class="flex items-center"><span class="check-circle bg-green-500"></span>Gula Darah Puasa GD 2 Jam PP</li>
         <li class="flex items-center"><span class="check-circle bg-green-500"></span>Ureum Creatinin</li>
-        <li class="flex items-center"><span class="check-circle bg-green-500"></span> Cholesterol Total</li>
+        <li class="flex items-center"><span class="check-circle bg-green-500"></span>Cholesterol Total</li>
         <li class="flex items-center"><span class="check-circle bg-green-500"></span>Trigliserida</li>
         <li class="flex items-center"><span class="check-circle bg-green-500"></span>SGOT</li>
         <li class="flex items-center"><span class="check-circle bg-green-500"></span>SGPT</li>
-        <li class="flex items-center"><span class="check-circle bg-green-500"></span>Ureum Creatinin</li>
         <li class="flex items-center"><span class="check-circle bg-green-500"></span>Urine Lengkap</li>
         <li class="flex items-center"><span class="check-circle bg-green-500"></span>Asam Urat</li>
         <li class="flex items-center"><span class="check-circle bg-green-500"></span>Rontgen Thorax</li>
-        <li class="flex items-center"><span class="check-circle bg-green-500"></span>Ekg</li>
+        <li class="flex items-center"><span class="check-circle bg-green-500"></span>EKG</li>
         <li class="flex items-center"><span class="check-circle bg-green-500"></span>USG Whole Abdomen</li>
       </ul>
-      <!-- Harga -->
-      <div class="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-[-10%]">
-        <button onclick="isiFormPendaftaran('Emas', 1100000)" 
-                class="bg-blue-800 hover:bg-blue-900 text-white px-6 py-2 rounded-full shadow-lg transition block text-center">
+      <!-- Harga + Tombol -->
+      <div class="mt-4 flex justify-center items-center gap-3 pb-6">
+        <div class="bg-blue-800 text-white px-6 py-2 rounded-full shadow-lg text-center">
           <p class="line-through text-gray-300 text-xs">Rp 1.180.000,-</p>
           <p class="flex items-baseline justify-center gap-1">
             <span class="text-base">Rp</span>
             <span class="text-2xl font-extrabold">1.100.000,-</span>
           </p>
+        </div>
+        <button 
+          class="toggleBtn bg-blue-800 text-white px-5 py-3 rounded-full shadow-lg 
+                 transition-colors duration-300 transform hover:scale-110 text-xl font-bold
+                 hover:bg-yellow-400 hover:text-blue-900"
+          data-paket="Emas"
+          data-harga="Rp 1.100.000,-">
+          +
         </button>
       </div>
     </div>
 
-   <div class="bg-white rounded-xl shadow-2xl relative pb-12">
+    <!-- Paket 3 -->
+    <div class="bg-white rounded-xl shadow-2xl flex flex-col">
       <div class="bg-yellow-500 text-white text-lg font-bold py-3 text-center shadow-md rounded-t-xl">
-       Paket Check Up Exellent
+        Paket Check Up Exellent
       </div>
-      <ul class="p-6 text-gray-700 text-sm space-y-3">
+      <ul class="p-6 text-gray-700 text-sm space-y-3 flex-1">
         <li class="flex items-center"><span class="check-circle bg-yellow-500"></span>Hematologi Lengkap</li>
         <li class="flex items-center"><span class="check-circle bg-yellow-500"></span>VDRL</li>
         <li class="flex items-center"><span class="check-circle bg-yellow-500"></span>TPHA</li>
@@ -746,23 +882,33 @@
         <li class="flex items-center"><span class="check-circle bg-yellow-500"></span>Cholesterol Total</li>
         <li class="flex items-center"><span class="check-circle bg-yellow-500"></span>Urine Lengkap</li>
         <li class="flex items-center"><span class="check-circle bg-yellow-500"></span>HIV Rapid</li>
-        <li class="flex items-center"><span class="check-circle bg-yellow-500"></span>HBSAg (Stick)</li>
+        <li class="flex items-center"><span class="check-circle bg-yellow-500"></span>HBsAg (Stick)</li>
         <li class="flex items-center"><span class="check-circle bg-yellow-500"></span>Rontgen Thorax</li>
       </ul>
-      <!-- Harga -->
-      <div class="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-[-10%]">
-        <button onclick="isiFormPendaftaran('Check Up Excellent', 638000)" 
-                class="bg-blue-800 hover:bg-blue-900 text-white px-6 py-2 rounded-full shadow-lg transition block text-center">
+      <!-- Harga + Tombol -->
+      <div class="mt-4 flex justify-center items-center gap-3 pb-6">
+        <div class="bg-blue-800 text-white px-6 py-2 rounded-full shadow-lg text-center">
           <p class="flex items-baseline justify-center gap-1">
             <span class="text-base">Rp</span>
             <span class="text-2xl font-extrabold">638.000,-</span>
           </p>
+        </div>
+        <button 
+          class="toggleBtn bg-blue-800 text-white px-5 py-3 rounded-full shadow-lg 
+                 transition-colors duration-300 transform hover:scale-110 text-xl font-bold
+                 hover:bg-yellow-400 hover:text-blue-900"
+          data-paket="Check Up Exellent"
+          data-harga="Rp 638.000,-">
+          +
         </button>
       </div>
-      </div>
-      <div class="bg-white rounded-xl shadow-2xl relative pb-12">
+    </div>
+  
+  <!-- Paket Check Up Platinum -->
+  <div class="bg-white rounded-xl shadow-2xl flex flex-col justify-between min-h-full">
+    <div>
       <div class="bg-teal-800 text-white text-lg font-bold py-3 text-center shadow-md rounded-t-xl">
-       Paket Check Up Platinum
+        Paket Check Up Platinum
       </div>
       <ul class="p-6 text-gray-700 text-sm space-y-3">
         <li class="flex items-center"><span class="check-circle bg-teal-800"></span>Hematologi Lengkap</li>
@@ -775,88 +921,116 @@
         <li class="flex items-center"><span class="check-circle bg-teal-800"></span>Asam Urat</li>
         <li class="flex items-center"><span class="check-circle bg-teal-800"></span>Rontgen Thorax</li>
         <li class="flex items-center"><span class="check-circle bg-teal-800"></span>EKG</li>
-        <li class="flex items-center"><span class="check-circle bg-teal-800"></span> Ureum Creatinin</li>
-        <li class="flex items-center"><span class="check-circle bg-teal-800"></span> Gula Darah Puasa Gula Darah 2 Jam PP</li>
-        <li class="flex items-center"><span class="check-circle bg-teal-800"></span> HBSAg (Stick)</li>
-
+        <li class="flex items-center"><span class="check-circle bg-teal-800"></span>Ureum Creatinin</li>
+        <li class="flex items-center"><span class="check-circle bg-teal-800"></span>Gula Darah Puasa 2 Jam PP</li>
+        <li class="flex items-center"><span class="check-circle bg-teal-800"></span>HBsAg (Stick)</li>
       </ul>
-      <!-- Harga -->
-      <div class="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-[-10%]">
-        <button onclick="isiFormPendaftaran('Check Up Platinum', 1162000)" 
-                class="bg-blue-800 hover:bg-blue-900 text-white px-6 py-2 rounded-full shadow-lg transition block text-center">
-          <p class="flex items-baseline justify-center gap-1">
-            <span class="text-base">Rp</span>
-            <span class="text-2xl font-extrabold">1.162.000,-</span>
-          </p>
-        </button>
-      </div>
     </div>
-    <div class="bg-white rounded-xl shadow-2xl relative pb-12">
+    <!-- Harga + Tombol -->
+    <div class="mt-4 flex justify-center items-center gap-3 pb-6">
+      <div class="bg-blue-800 text-white px-6 py-2 rounded-full shadow-lg inline-block text-center">
+        <p class="flex items-baseline justify-center gap-1">
+          <span class="text-base">Rp</span>
+          <span class="text-2xl font-extrabold">1.162.000,-</span>
+        </p>
+      </div>
+      <button 
+       class="toggleBtn bg-blue-800 text-white px-4 py-2 sm:px-5 sm:py-3 rounded-full shadow-lg 
+             transition-colors duration-300 transform hover:scale-110 text-xl font-bold
+             hover:bg-yellow-400 hover:text-blue-900"
+         data-paket="Check Up Platinum"
+        data-harga="Rp 1.162.000,-">
+        +
+      </button>
+    </div>
+  </div>
+
+  <!-- Paket Program Kerja 1 -->
+  <div class="bg-white rounded-xl shadow-2xl flex flex-col justify-between min-h-full">
+    <div>
       <div class="bg-purple-700 text-white text-lg font-bold py-3 text-center shadow-md rounded-t-xl">
-         Paket Program Kerja 1
+        Paket Program Kerja 1
       </div>
       <ul class="p-6 text-gray-700 text-sm space-y-3">
         <li class="flex items-center"><span class="check-circle bg-purple-700"></span>Hematologi Lengkap</li>
-        <li class="flex items-center"><span class="check-circle bg-purple-700"></span> Gula Darah Puasa Gula Darah 2 Jam PP</li>
+        <li class="flex items-center"><span class="check-circle bg-purple-700"></span>Gula Darah Puasa & 2 Jam PP</li>
         <li class="flex items-center"><span class="check-circle bg-purple-700"></span>Cholesterol Lengkap</li>
-        <li class="flex items-center"><span class="check-circle bg-purple-700"></span> Ureum Creatinin</li>
+        <li class="flex items-center"><span class="check-circle bg-purple-700"></span>Ureum Creatinin</li>
         <li class="flex items-center"><span class="check-circle bg-purple-700"></span>SGPT</li>
         <li class="flex items-center"><span class="check-circle bg-purple-700"></span>SGOT</li>
         <li class="flex items-center"><span class="check-circle bg-purple-700"></span>Gamma GT</li>
         <li class="flex items-center"><span class="check-circle bg-purple-700"></span>Asam Urat</li>
-        <li class="flex items-center"><span class="check-circle bg-purple-700"></span>HBSAg (Stick)</li>
+        <li class="flex items-center"><span class="check-circle bg-purple-700"></span>HBsAg (Stick)</li>
         <li class="flex items-center"><span class="check-circle bg-purple-700"></span>EKG</li>
-        <li class="flex items-center"><span class="check-circle bg-purple-700"></span>Urine Lengkapk</li>
+        <li class="flex items-center"><span class="check-circle bg-purple-700"></span>Urine Lengkap</li>
         <li class="flex items-center"><span class="check-circle bg-purple-700"></span>Pemeriksaan Fisik</li>
         <li class="flex items-center"><span class="check-circle bg-purple-700"></span>Rontgen Thorax</li>
         <li class="flex items-center"><span class="check-circle bg-purple-700"></span>Audiometri</li>
       </ul>
-      <!-- Harga -->
-      <div class="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-[-10%]">
-        <button onclick="isiFormPendaftaran('Program Kerja 1', 1350000)" 
-                class="bg-blue-800 hover:bg-blue-900 text-white px-6 py-2 rounded-full shadow-lg transition block text-center">
-          <p class="line-through text-gray-300 text-xs">Rp 1.420.000,-</p>
-          <p class="flex items-baseline justify-center gap-1">
-            <span class="text-base">Rp</span>
-            <span class="text-2xl font-extrabold">1.350.000,-</span>
-          </p>
-        </button>
-      </div>
     </div>
-    <div class="bg-white rounded-xl shadow-2xl relative pb-12">
+    <!-- Harga + Tombol -->
+    <div class="mt-4 flex justify-center items-center gap-3 pb-6">
+      <div class="bg-blue-800 text-white px-6 py-2 rounded-full shadow-lg inline-block text-center">
+        <p class="line-through text-gray-300 text-xs">Rp 1.420.000,-</p>
+        <p class="flex items-baseline justify-center gap-1">
+          <span class="text-base">Rp</span>
+          <span class="text-2xl font-extrabold">1.350.000,-</span>
+        </p>
+      </div>
+      <button 
+        class="toggleBtn bg-blue-800 text-white px-4 py-2 sm:px-5 sm:py-3 rounded-full shadow-lg 
+             transition-colors duration-300 transform hover:scale-110 text-xl font-bold
+             hover:bg-yellow-400 hover:text-blue-900"
+        data-paket="Program Kerja 1"
+        data-harga="Rp 1.350.000,-">
+        +
+      </button>
+    </div>
+  </div>
+
+  <!-- Paket Program Kerja 2 -->
+  <div class="bg-white rounded-xl shadow-2xl flex flex-col justify-between min-h-full">
+    <div>
       <div class="bg-red-800 text-white text-lg font-bold py-3 text-center shadow-md rounded-t-xl">
-         Paket Program Kerja 2
+        Paket Program Kerja 2
       </div>
       <ul class="p-6 text-gray-700 text-sm space-y-3">
         <li class="flex items-center"><span class="check-circle bg-red-800"></span>Hematologi Lengkap</li>
-        <li class="flex items-center"><span class="check-circle bg-red-800"></span> Gula Darah Puasa</li>
+        <li class="flex items-center"><span class="check-circle bg-red-800"></span>Gula Darah Puasa</li>
         <li class="flex items-center"><span class="check-circle bg-red-800"></span>Cholesterol Lengkap</li>
-        <li class="flex items-center"><span class="check-circle bg-red-800"></span> Ureum Creatinin</li>
+        <li class="flex items-center"><span class="check-circle bg-red-800"></span>Ureum Creatinin</li>
         <li class="flex items-center"><span class="check-circle bg-red-800"></span>SGPT</li>
         <li class="flex items-center"><span class="check-circle bg-red-800"></span>SGOT</li>
         <li class="flex items-center"><span class="check-circle bg-red-800"></span>Asam Urat</li>
         <li class="flex items-center"><span class="check-circle bg-red-800"></span>HIV Rapid</li>
-        <li class="flex items-center"><span class="check-circle bg-red-800"></span>HBSAg (Stick)</li>
+        <li class="flex items-center"><span class="check-circle bg-red-800"></span>HBsAg (Stick)</li>
         <li class="flex items-center"><span class="check-circle bg-red-800"></span>EKG</li>
         <li class="flex items-center"><span class="check-circle bg-red-800"></span>Urine Lengkap</li>
         <li class="flex items-center"><span class="check-circle bg-red-800"></span>Pemeriksaan Fisik</li>
         <li class="flex items-center"><span class="check-circle bg-red-800"></span>Rontgen Thorax</li>
-        <li class="flex items-center"><span class="check-circle bg-red-800"></span>Faces Rutin</li>
+        <li class="flex items-center"><span class="check-circle bg-red-800"></span>Feces Rutin</li>
       </ul>
-      <!-- Harga -->
-      <div class="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-[-10%]">
-        <button onclick="isiFormPendaftaran('Program Kerja 2', 900000)" 
-                class="bg-blue-800 hover:bg-blue-900 text-white px-6 py-2 rounded-full shadow-lg transition block text-center">
-          <p class="line-through text-gray-300 text-xs">Rp 1.020.000,-</p>
-          <p class="flex items-baseline justify-center gap-1">
-            <span class="text-base">Rp</span>
-            <span class="text-2xl font-extrabold">900.000,-</span>
-         </p>
-        </button>
+    </div>
+    <!-- Harga + Tombol -->
+    <div class="mt-4 flex justify-center items-center gap-3 pb-6">
+      <div class="bg-blue-800 text-white px-6 py-2 rounded-full shadow-lg inline-block text-center">
+        <p class="line-through text-gray-300 text-xs">Rp 1.020.000,-</p>
+        <p class="flex items-baseline justify-center gap-1">
+          <span class="text-base">Rp</span>
+          <span class="text-2xl font-extrabold">900.000,-</span>
+        </p>
       </div>
-   </div>  
-  </div>
-</section>
+     <button 
+      class="toggleBtn bg-blue-800 text-white px-4 py-2 sm:px-5 sm:py-3 rounded-full shadow-lg 
+             transition-colors duration-300 transform hover:scale-110 text-xl font-bold
+             hover:bg-yellow-400 hover:text-blue-900"
+        data-paket="Program Kerja 2"
+        data-harga="Rp 900.000,-">
+        +
+      </button>
+    </div>
+  </div></div>
+  </section>
 
 <section class="relative bg-white py-12 shadow-2xl sm:py-16 overflow-hidden">
   <!-- Plus kiri atas -->
@@ -902,7 +1076,7 @@
         <li class="flex items-center gap-2"><span class="check-circle bg-yellow-500"></span> Golongan Darah</li>
         <li class="flex items-center gap-2"><span class="check-circle bg-yellow-500"></span> Gamma GT</li>
         <li class="flex items-center gap-2"><span class="check-circle bg-yellow-500"></span> Asam Urat</li>
-        <li class="flex items-center gap-2"><span class="check-circle bg-yellow-500"></span> HBSAg (Stick)</li>
+        <li class="flex items-center gap-2"><span class="check-circle bg-yellow-500"></span> HBsAg (Stick)</li>
         <li class="flex items-center gap-2"><span class="check-circle bg-yellow-500"></span> EKG</li>
         <li class="flex items-center gap-2"><span class="check-circle bg-yellow-500"></span> Urine Lengkap</li>
         <li class="flex items-center gap-2"><span class="check-circle bg-yellow-500"></span> Pemeriksaan Fisik</li>
@@ -910,91 +1084,150 @@
         <li class="flex items-center gap-2"><span class="check-circle bg-yellow-500"></span> Audiometri</li>
       </ul>
 
-      <!-- Harga -->
-      <div class="mt-2 sm:mt-4 text-center">
-      <button onclick="isiFormPendaftaran('Program Kerja 3', 1332000)" 
-              class="bg-blue-800 hover:bg-blue-900 text-white px-5 py-2 sm:px-6 sm:py-3 rounded-full shadow-lg transition transform hover:scale-105 inline-block">
-        <p class="line-through text-gray-300 text-xs">Rp 1.400.000,-</p>
-        <p class="flex items-baseline justify-center gap-1">
-          <span class="text-sm sm:text-base">Rp</span>
-          <span class="text-xl sm:text-2xl font-extrabold">1.332.000,-</span>
-        </p>
-      </button>
+    <!-- Harga -->
+<div class="relative mt-2 sm:mt-4 text-center flex justify-center items-center">
+  <!-- Harga + Tombol -->
+  <div class="mt-2 sm:mt-4 flex justify-center items-center gap-3">
+    
+    <!-- Harga (hanya tampilan) -->
+    <div class="bg-blue-800 text-white px-5 py-2 sm:px-6 sm:py-3 rounded-full shadow-lg inline-block text-center">
+      <p class="line-through text-gray-300 text-xs">Rp 1.400.000,-</p>
+      <p class="flex items-baseline justify-center gap-1">
+        <span class="text-sm sm:text-base">Rp</span>
+        <span class="text-xl sm:text-2xl font-extrabold">1.332.000,-</span>
+      </p>
     </div>
-    </div>
+    <button 
+      class="toggleBtn bg-blue-800 text-white px-4 py-2 sm:px-5 sm:py-3 rounded-full shadow-lg 
+             transition-colors duration-300 transform hover:scale-110 text-xl font-bold
+             hover:bg-yellow-400 hover:text-blue-900"
+      data-paket="Program Kerja 3"
+      data-harga="Rp 1.332.000,-">
+      +
+    </button>
 
-    <!-- KANAN: Form -->
-    <div class="bg-gradient-to-r from-green-800 to-green-500 rounded-2xl shadow-2xl p-6 sm:p-8">
-      <h2 class="text-xl sm:text-2xl font-bold text-center text-white mb-2">Pendaftaran Online</h2>
-      <div class="w-12 sm:w-16 h-1 bg-yellow-400 mx-auto mb-4 sm:mb-6 rounded"></div>
-
-      <form id="form-daftar" class="space-y-4 sm:space-y-5 text-sm sm:text-base">
-  <!-- Nama & Alamat -->
-  <div class="grid grid-cols-2 gap-3">
-    <div>
-      <label for="nama" class="block text-white font-semibold mb-1 text-xs sm:text-sm">Nama</label>
-      <input id="nama" type="text" placeholder="Nama" 
-             class="w-full p-2 sm:p-3 rounded-md border border-gray-300 text-gray-900 
-                    focus:ring-2 focus:ring-yellow-400 focus:outline-none" required>
-    </div>
-    <div>
-      <label for="alamat" class="block text-white font-semibold mb-1 text-xs sm:text-sm">Alamat</label>
-      <input id="alamat" type="text" placeholder="Alamat" 
-             class="w-full p-2 sm:p-3 rounded-md border border-gray-300 text-gray-900 
-                    focus:ring-2 focus:ring-yellow-400 focus:outline-none" required>
-    </div>
   </div>
 
-  <!-- Telepon & Tanggal -->
-  <div class="grid grid-cols-2 gap-3">
-    <div>
-      <label for="telepon" class="block text-white font-semibold mb-1 text-xs sm:text-sm">Telepon</label>
-      <input id="telepon" type="tel" placeholder="08xxxx" 
-             class="w-full p-2 sm:p-3 rounded-md border border-gray-300 text-gray-900 
-                    focus:ring-2 focus:ring-yellow-400 focus:outline-none" required>
-    </div>
-    <div>
-      <label for="date" class="block text-white font-semibold mb-1 text-xs sm:text-sm">Tanggal</label>
-      <input id="date" type="date" 
-             class="w-full p-2 sm:p-3 rounded-md border border-gray-300 text-gray-900 
-                    focus:ring-2 focus:ring-yellow-400 focus:outline-none" required>
-    </div>
-  </div>
+<script>
+  // Simpan state per tombol
+  const states = new Map();
 
-  <!-- Paket & Harga -->
-  <div class="grid grid-cols-2 gap-3">
-    <div>
-      <label class="block text-white font-semibold mb-1 text-xs sm:text-sm">Paket</label>
-      <input id="pelayanan" type="text" placeholder="Paket" readonly
-             class="w-full p-2 sm:p-3 rounded-md border border-gray-300 bg-gray-100 text-gray-700">
-    </div>
-    <div>
-      <label class="block text-white font-semibold mb-1 text-xs sm:text-sm">Harga</label>
-      <input id="hargaInput" type="text" placeholder="Harga" readonly
-             class="w-full p-2 sm:p-3 rounded-md border border-gray-300 bg-gray-100 text-gray-700">
-    </div>
-  </div>
+  document.querySelectorAll(".toggleBtn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const paketNama = btn.getAttribute("data-paket");
+      const paketHarga = btn.getAttribute("data-harga");
 
-  <!-- Pesan -->
-  <div>
-    <label for="message" class="block text-white font-semibold mb-1 text-xs sm:text-sm">Pesan</label>
-    <textarea id="message" rows="2" placeholder="Tuliskan pesan" 
-              class="w-full p-2 sm:p-3 rounded-md border border-gray-300 text-gray-900 
-                     focus:ring-2 focus:ring-yellow-400 focus:outline-none"></textarea>
-  </div>
+      let clickStep = states.get(btn) || 0;
+      clickStep++;
 
-  <!-- Tombol -->
-  <button type="button" onclick="sendToWhatsApp()"
-          class="w-full bg-yellow-400 hover:bg-yellow-500 text-green-900 font-semibold py-2 sm:py-3 
-                 rounded-md transition transform hover:scale-105 shadow-lg">
-    Kirim
-  </button>
-</form>
+      if (clickStep === 1) {
+        // Klik pertama → jadi "Daftar"
+        btn.textContent = "Daftar";
+        btn.classList.remove("bg-blue-800", "hover:bg-blue-900", "text-white");
+        btn.classList.add("bg-yellow-500", "hover:bg-yellow-600", "text-blue-900", "font-bold");
+      } 
+      else if (clickStep === 2) {
+        // Klik kedua → scroll & isi form
+        const form = document.getElementById("form-daftar");
+        if (form) form.scrollIntoView({ behavior: "smooth" });
+
+        const inputPaket = document.getElementById("pelayanan");
+        const inputHarga = document.getElementById("hargaInput");
+        const inputNama  = document.getElementById("nama");
+
+        if (inputPaket) inputPaket.value = paketNama;
+        if (inputHarga) inputHarga.value = paketHarga;
+        if (inputNama) inputNama.focus();
+      } 
+      else {
+        // Klik ketiga → kembali ke "+"
+        btn.textContent = "+";
+        btn.classList.remove("bg-yellow-500", "hover:bg-yellow-600", "text-blue-900", "font-bold");
+        btn.classList.add("bg-blue-800", "hover:bg-blue-900", "text-white");
+        clickStep = 0; // reset siklus
+      }
+
+      states.set(btn, clickStep);
+    });
+  });
+</script>
+</div></div>
+
+   <!-- KANAN: Form -->
+<div class="bg-gradient-to-r from-green-800 to-green-500 rounded-2xl shadow-2xl p-6 sm:p-8">
+  <h2 class="text-xl sm:text-2xl font-bold text-center text-white mb-2">Pendaftaran Online</h2>
+  <div class="w-12 sm:w-16 h-1 bg-yellow-400 mx-auto mb-4 sm:mb-6 rounded"></div>
+
+  <form id="form-daftar" class="space-y-4 sm:space-y-5 text-sm sm:text-base">
+    <!-- Nama & Alamat -->
+    <div class="grid grid-cols-2 gap-3">
+      <div>
+        <label for="nama" class="block text-white font-semibold mb-1 text-xs sm:text-sm">Nama</label>
+        <input id="nama" type="text" placeholder="Nama" 
+               class="w-full p-2 sm:p-3 rounded-md border border-gray-300 text-gray-900 
+                      focus:ring-2 focus:ring-yellow-400 focus:outline-none" required>
+      </div>
+      <div>
+        <label for="alamat" class="block text-white font-semibold mb-1 text-xs sm:text-sm">Alamat</label>
+        <input id="alamat" type="text" placeholder="Alamat" 
+               class="w-full p-2 sm:p-3 rounded-md border border-gray-300 text-gray-900 
+                      focus:ring-2 focus:ring-yellow-400 focus:outline-none" required>
+      </div>
+    </div>
+
+    <!-- Telepon & Tanggal -->
+    <div class="grid grid-cols-2 gap-3">
+      <div>
+        <label for="telepon" class="block text-white font-semibold mb-1 text-xs sm:text-sm">Telepon</label>
+        <input id="telepon" type="tel" placeholder="08xxxx" 
+               class="w-full p-2 sm:p-3 rounded-md border border-gray-300 text-gray-900 
+                      focus:ring-2 focus:ring-yellow-400 focus:outline-none" required>
+      </div>
+      <div>
+        <label for="date" class="block text-white font-semibold mb-1 text-xs sm:text-sm">Tanggal</label>
+        <input id="date" type="date" 
+               class="w-full p-2 sm:p-3 rounded-md border border-gray-300 text-gray-900 
+                      focus:ring-2 focus:ring-yellow-400 focus:outline-none" required>
+      </div>
+    </div>
+
+    <!-- Paket & Harga -->
+    <div class="grid grid-cols-2 gap-3">
+      <div>
+        <label class="block text-white font-semibold mb-1 text-xs sm:text-sm">Paket</label>
+        <input id="pelayanan" type="text" placeholder="Paket" readonly
+               class="w-full p-2 sm:p-3 rounded-md border border-gray-300 bg-gray-100 text-gray-700">
+      </div>
+      <div>
+        <label class="block text-white font-semibold mb-1 text-xs sm:text-sm">Harga</label>
+        <input id="hargaInput" type="text" placeholder="Harga" readonly
+               class="w-full p-2 sm:p-3 rounded-md border border-gray-300 bg-gray-100 text-gray-700">
+      </div>
+    </div>
+
+    <!-- Pesan -->
+    <div>
+      <label for="message" class="block text-white font-semibold mb-1 text-xs sm:text-sm">Pesan</label>
+      <textarea id="message" rows="2" placeholder="Tuliskan pesan" 
+                class="w-full p-2 sm:p-3 rounded-md border border-gray-300 text-gray-900 
+                       focus:ring-2 focus:ring-yellow-400 focus:outline-none"></textarea>
+    </div>
+
+    <!-- Tombol -->
+    <button type="button" onclick="sendToWhatsApp()"
+            class="w-full bg-yellow-400 hover:bg-yellow-500 text-green-900 font-semibold py-2 sm:py-3 
+                   rounded-md transition transform hover:scale-105 shadow-lg">
+      Kirim
+    </button>
+  </form>
+</div>
+
     </div>
   </div>
 </section>
 
 <script>
+  
 let hargaTerpilih = 0;
 
 function isiFormPendaftaran(namaPaket, harga) {
