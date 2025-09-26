@@ -17,6 +17,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@700;900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Didot&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap" rel="stylesheet">
 
   <style>
     .font-didot {
@@ -200,9 +201,10 @@ Bersama Klinik Utama Diagnosa, wujudkan hidup sehat dan berkualitas. Didukung do
   <!-- Tambah font cantik dari Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Raleway:wght@800&family=Open+Sans&display=swap" rel="stylesheet">
 </head>
+</section>
 
-<section class="max-w-7xl mx-auto px-4 py-20 bg-white">
-  <section id="layanan" class="mt-20"></section>
+<section class="w-full py-20 bg-white">
+  <div class="w-full">  <section id="layanan" class="mt-20"></section>
   
   <!-- Judul -->
   <div class="flex justify-center">
@@ -215,8 +217,8 @@ Bersama Klinik Utama Diagnosa, wujudkan hidup sehat dan berkualitas. Didukung do
 </div>
 
 
+  <div class="px-6 md:px-12">
   <div class="grid md:grid-cols-3 gap-8">
-
     <div class="bg-green-200 rounded-lg shadow-md p-6 text-center hover:shadow-xl transition transform hover:-translate-y-2 hover:scale-105 duration-300">
     <img src="radiologi.jpg" alt="Radiologi" class="mx-auto mb-4 w-28 h-28 object-cover shadow-md border border-green-500"/>
     <h3 class="text-xl font-bold text-green-900 mb-2" style="font-family: 'Raleway', sans-serif;">
@@ -313,20 +315,20 @@ Bersama Klinik Utama Diagnosa, wujudkan hidup sehat dan berkualitas. Didukung do
 </section>
 
 <!-- Promo -->
-<section class="bg-white py-16 shadow-xl relative">
+<section class="bg-white py-16 shadow-xl relative mb-24">
   <div class="max-w-7xl mx-auto px-6">
     <!-- Header -->
     <div class="flex flex-col md:flex-row items-center justify-between mb-16 relative px-6">
-  <!-- Bagian Teks -->
-  <div class="relative max-w-xl">
-    <!-- Ornamen lingkaran transparan -->
-    <div class="absolute -top-10 -left-10 w-32 h-32 bg-green-200 rounded-full opacity-40 blur-xl"></div>
-    <div class="absolute top-20 -left-16 w-20 h-20 bg-green-300 rounded-full opacity-30 blur-lg"></div>
+      <!-- Bagian Teks -->
+      <div class="relative max-w-xl">
+        <!-- Ornamen lingkaran transparan -->
+        <div class="absolute -top-10 -left-10 w-32 h-32 bg-green-200 rounded-full opacity-40 blur-xl"></div>
+        <div class="absolute top-20 -left-16 w-20 h-20 bg-green-300 rounded-full opacity-30 blur-lg"></div>
 
-    <!-- Promo Spesial -->
-    <h2 class="promo-text mb-2 relative z-10 text-green-700 italic text-4xl">
-  Promo Spesial
-</h2>
+        <!-- Promo Spesial -->
+        <h2 class="promo-text mb-2 relative z-10 text-green-700 italic text-4xl">
+          Promo Spesial
+        </h2>
 
 
     <!-- Judul -->
@@ -377,75 +379,86 @@ Bersama Klinik Utama Diagnosa, wujudkan hidup sehat dan berkualitas. Didukung do
     <!-- Paket Cards -->
      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
   <!-- Paket Hemat -->
-  <div class="bg-white rounded-xl shadow-2xl relative pb-12">
+  <div class="bg-white rounded-xl shadow-2xl flex flex-col">
       <div class="bg-green-500 text-white text-lg font-bold py-3 text-center shadow-md rounded-t-xl">
         Paket Hemat
       </div>
-      <ul class="p-6 text-gray-700 text-sm space-y-3">
+      <ul class="p-6 text-gray-700 text-sm space-y-3 flex-1">
         <li class="flex items-center"><span class="check-circle bg-green-500"></span>Hematologi Rutin</li>
         <li class="flex items-center"><span class="check-circle bg-green-500"></span>Gula Darah Sewaktu</li>
         <li class="flex items-center"><span class="check-circle bg-green-500"></span>Cholesterol Total</li>
         <li class="flex items-center"><span class="check-circle bg-green-500"></span>Trigliserida</li>
         <li class="flex items-center"><span class="check-circle bg-green-500"></span>Asam Urat</li>
       </ul>
-    <!-- Harga Ngambang -->
-    <div class="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-[-10%]">
-      <button
-        onclick="window.location.href='promo.html?paket=Paket Hemat&harga=241000'"
-        class="bg-blue-800 hover:bg-blue-900 text-white px-6 py-2 rounded-full shadow-lg transition block text-center">
-        <p class="line-through text-gray-300 text-xs">Rp 283.000,-</p>
-        <p class="flex items-baseline justify-center gap-1">
-          <span class="text-base">Rp</span>
-          <span class="text-2xl font-extrabold">241.000,-</span>
-        </p>
-      </button>
+      <div class="mt-auto flex justify-center items-center gap-3 pb-6">
+        <div class="bg-blue-800 text-white px-6 py-2 rounded-full shadow-lg text-center">
+          <p class="line-through text-gray-300 text-xs">Rp 283.000,-</p>
+          <p class="flex items-baseline justify-center gap-1">
+            <span class="text-base">Rp</span>
+            <span class="text-2xl font-extrabold">241.000,-</span>
+          </p>
+        </div>
+        <a href="promo.html?paket=Hemat&harga=241000#form-daftar"
+   class="bg-blue-800 text-white px-5 py-3 rounded-full shadow-lg 
+          transition-colors duration-300 transform hover:scale-110 text-xl font-bold
+          hover:bg-yellow-400 hover:text-blue-900">
+  +
+</a>
+      </div>
     </div>
-  </div>
 
-  <!-- Paket Mini -->
-  <div class="bg-white rounded-xl shadow-2xl relative pb-12">
+    <!-- Paket Mini -->
+    <div class="bg-white rounded-xl shadow-2xl flex flex-col">
       <div class="bg-yellow-500 text-white text-lg font-bold py-3 text-center shadow-md rounded-t-xl">
         Paket Mini
       </div>
-      <ul class="p-6 text-gray-700 text-sm space-y-3">
+      <ul class="p-6 text-gray-700 text-sm space-y-3 flex-1">
         <li class="flex items-center"><span class="check-circle bg-yellow-500"></span>Hematologi Lengkap</li>
         <li class="flex items-center"><span class="check-circle bg-yellow-500"></span>Urine Lengkap</li>
         <li class="flex items-center"><span class="check-circle bg-yellow-500"></span>Rontgen Thorax</li>
       </ul>
-    <!-- Harga Ngambang -->
-    <div class="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-[-10%]">
-      <button
-        onclick="window.location.href='promo.html?paket=Mini&harga=230000'"
-        class="bg-blue-800 hover:bg-blue-900 text-white px-6 py-2 rounded-full shadow-lg transition block text-center">
-        <p class="line-through text-gray-300 text-xs">Rp 285.000,-</p>
-        <p class="flex items-baseline justify-center gap-1">
-          <span class="text-base">Rp</span>
-          <span class="text-2xl font-extrabold">230.000,-</span>
-        </p>
-      </button>
+      <div class="mt-auto flex justify-center items-center gap-3 pb-6">
+        <div class="bg-blue-800 text-white px-6 py-2 rounded-full shadow-lg text-center">
+          <p class="line-through text-gray-300 text-xs">Rp 285.000,-</p>
+          <p class="flex items-baseline justify-center gap-1">
+            <span class="text-base">Rp</span>
+            <span class="text-2xl font-extrabold">230.000,-</span>
+          </p>
+        </div>
+        <a href="promo.html?paket=Mini&harga=230000#form-daftar"
+   class="bg-blue-800 text-white px-5 py-3 rounded-full shadow-lg 
+          transition-colors duration-300 transform hover:scale-110 text-xl font-bold
+          hover:bg-yellow-400 hover:text-blue-900">
+  +
+</a>
+      </div>
     </div>
-  </div>
 
-  <!-- Paket Paru Sehat -->
-  <div class="bg-white rounded-xl shadow-2xl relative pb-12">
+    <!-- Paket Paru Sehat -->
+    <div class="bg-white rounded-xl shadow-2xl flex flex-col">
       <div class="bg-red-500 text-white text-lg font-bold py-3 text-center shadow-md rounded-t-xl">
         Paket Paru Sehat
       </div>
-      <ul class="p-6 text-gray-700 text-sm space-y-3">
+      <ul class="p-6 text-gray-700 text-sm space-y-3 flex-1">
         <li class="flex items-center"><span class="check-circle bg-red-500"></span>Hematologi Lengkap</li>
         <li class="flex items-center"><span class="check-circle bg-red-500"></span>Rontgen Thorax</li>
       </ul>
-    <!-- Harga Ngambang -->
-    <div class="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-[-10%]">
-      <button
-        onclick="window.location.href='promo.html?paket=Paru Sehat&harga=178000'"
-        class="bg-blue-800 hover:bg-blue-900 text-white px-6 py-2 rounded-full shadow-lg transition block text-center">
-        <p class="line-through text-gray-300 text-xs">Rp 250.000,-</p>
-        <p class="flex items-baseline justify-center gap-1">
-          <span class="text-base">Rp</span>
-          <span class="text-2xl font-extrabold">178.000,-</span>
-        </p>
-      </button>
+      <div class="mt-auto flex justify-center items-center gap-3 pb-6">
+        <div class="bg-blue-800 text-white px-6 py-2 rounded-full shadow-lg text-center">
+          <p class="line-through text-gray-300 text-xs">Rp 250.000,-</p>
+          <p class="flex items-baseline justify-center gap-1">
+            <span class="text-base">Rp</span>
+            <span class="text-2xl font-extrabold">178.000,-</span>
+          </p>
+        </div>
+<a href="promo.html?paket=Paru%20Sehat&harga=178000#form-daftar"
+   class="bg-blue-800 text-white px-5 py-3 rounded-full shadow-lg 
+          transition-colors duration-300 transform hover:scale-110 text-xl font-bold
+          hover:bg-yellow-400 hover:text-blue-900">
+  +
+</a>
+
+      </div>
     </div>
   </div>
 </div>
@@ -825,6 +838,88 @@ Bersama Klinik Utama Diagnosa, wujudkan hidup sehat dan berkualitas. Didukung do
   }
 }
 </style>
+
+<section class="bg-gradient-to-r from-blue-400 to-green-400 min-h-screen flex items-center justify-center p-6">
+
+  <div class="max-w-6xl w-full space-y-12 flex flex-col">
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <!-- Card 1 -->
+      <div class="bg-gradient-to-br from-green-500 to-green-600 text-white rounded-2xl p-8 flex flex-col justify-between shadow-2xl min-h-[360px] transform transition duration-300 hover:scale-105 hover:shadow-3xl">
+        <div>
+          <h2 class="text-2xl font-bold mb-3">Pengalaman Luar Biasa!</h2>
+          <p class="text-base leading-relaxed mb-5">
+            Pelayanan sangat profesional dan ramah. Saya merasa didengar dan dibantu dengan penuh perhatian. Sangat memuaskan!
+          </p>
+          <div class="flex mb-6 text-yellow-400 text-xl">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+        </div>
+        <div class="flex items-center">
+          <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Olivia Wilson" class="w-12 h-12 rounded-full border-2 border-white mr-3 shadow-md">
+          <div>
+            <p class="font-semibold">Olivia</p>
+            <p class="text-sm text-gray-200">Pasien MCU</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-gradient-to-br from-green-500 to-green-600 text-white rounded-2xl p-8 flex flex-col justify-between shadow-2xl min-h-[360px] transform transition duration-300 hover:scale-105 hover:shadow-3xl">
+        <div>
+          <h2 class="text-2xl font-bold mb-3">Sangat Direkomendasikan!</h2>
+          <p class="text-base leading-relaxed mb-5">
+            Prosesnya cepat, jelas, dan menyenangkan. Saya merasa aman dan puas dengan hasil yang diberikan. Layanan sangat memuaskan.
+          </p>
+          <div class="flex mb-6 text-yellow-400 text-xl">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+        </div>
+        <div class="flex items-center">
+          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Matt Zhang" class="w-12 h-12 rounded-full border-2 border-white mr-3 shadow-md">
+          <div>
+            <p class="font-semibold">Mattew</p>
+            <p class="text-sm text-gray-200">Pasien USG</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-gradient-to-br from-green-500 to-green-600 text-white rounded-2xl p-8 flex flex-col justify-between shadow-2xl min-h-[360px] transform transition duration-300 hover:scale-105 hover:shadow-3xl">
+        <div>
+          <h2 class="text-2xl font-bold mb-3">Melebihi Harapan!</h2>
+          <p class="text-base leading-relaxed mb-5">
+            Setiap detail diperhatikan dengan sangat baik. Saya benar-benar merasa dihargai sebagai pelanggan. Layanan sangat memuaskan dan profesional.
+          </p>
+          <div class="flex mb-6 text-yellow-400 text-xl">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+        </div>
+        <div class="flex items-center">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Hannah Morales" class="w-12 h-12 rounded-full border-2 border-white mr-3 shadow-md">
+          <div>
+            <p class="font-semibold">Hannah</p>
+            <p class="text-sm text-gray-200">Pasien MCU</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Judul di paling bawah -->
+    <h1 class="text-3xl md:text-5xl font-extrabold text-center tracking-wide 
+           bg-gradient-to-r from-yellow-300 via-white to-green-200 
+           bg-clip-text text-transparent font-[Poppins] drop-shadow-lg">
+  Cerita Mereka Tentang Kami
+</h1>
+  </div>
+
+</section>
+
+<!-- Tambahkan FontAwesome untuk ikon bintang -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+
 
   <!-- Contact Section -->
   <section class="bg-white py-20">
