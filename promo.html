@@ -108,7 +108,7 @@
               <li><a class="block px-4 py-2 hover:bg-green-300 text-green-900 font-bold" href="#">Treadmill</a></li>
             </ul>
           </li>
-          <li><a class="hover:text-green-700 transition" href="#">Hubungi Kami</a></li>
+          <li><a class="hover:text-green-700 transition" href="hubungikami.html">Contact</a></li>
         </ul>
       </nav>
 
@@ -146,7 +146,7 @@
             <li><a class="block hover:text-green-700 transition" href="#">Treadmill</a></li>
           </ul>
         </li>
-        <li><a class="block hover:text-green-700 transition" href="#">Hubungi Kami</a></li>
+        <li><a class="block hover:text-green-700 transition" href="hubungikami.html">Contact</a></li>
       </ul>
     </div>
   </header>
@@ -1269,25 +1269,25 @@ function sendToWhatsApp() {
     return;
   }
 
- let text = `Halo, saya ingin mendaftar.\n\n` +
-           `Nama: ${nama}\n` +
-           `Alamat: ${alamat}\n` +
-           `No Telepon: ${telepon}\n` +
-           `Paket: ${pelayanan}\n` +
-           `Harga: ${harga}\n` +
-           `Tanggal: ${date}`;
+ let text = 
+  `Halo, saya ingin mendaftar:\n\n` +
+  `Nama: ${nama}\n` +
+  `Alamat: ${alamat}\n` +
+  `No Telepon: ${telepon}\n` +
+  `Paket: ${pelayanan}\n` +
+  `Harga: Rp${harga}\n` +
+  `Tanggal: ${date}`;
 
 if (message) {
-  text += `\nPesan: ${message}`;
+  text += `\n\nPesan Tambahan: ${message}`;
 }
-
-let url = "https://wa.me/6282130471300?text=" + text;
-window.open(url, "_blank");
 
 
   const phone = "6282130471300";
-  window.open(`https://wa.me/${phone}?text=${encodeURIComponent(text)}`, "_blank");
+  let url = `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
+  window.open(url, "_blank");
 }
+
 
 window.addEventListener('DOMContentLoaded', isiFormDariURL);
 </script>
@@ -1464,7 +1464,7 @@ window.addEventListener('DOMContentLoaded', isiFormDariURL);
           </div>
         </div>
         <div class="flex items-center">
-          <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Olivia Wilson" class="w-12 h-12 rounded-full border-2 border-white mr-3 shadow-md">
+          <img src="profil kosong2.jpg" alt="Olivia Wilson" class="w-12 h-12 rounded-full border-2 border-white mr-3 shadow-md">
           <div>
             <p class="font-semibold">Olivia</p>
             <p class="text-sm text-gray-200">Pasien MCU</p>
@@ -1484,7 +1484,7 @@ window.addEventListener('DOMContentLoaded', isiFormDariURL);
           </div>
         </div>
         <div class="flex items-center">
-          <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Matt Zhang" class="w-12 h-12 rounded-full border-2 border-white mr-3 shadow-md">
+          <img src="profile kosong 3.png" alt="Matt Zhang" class="w-12 h-12 rounded-full border-2 border-white mr-3 shadow-md">
           <div>
             <p class="font-semibold">Mattew</p>
             <p class="text-sm text-gray-200">Pasien USG</p>
@@ -1504,7 +1504,7 @@ window.addEventListener('DOMContentLoaded', isiFormDariURL);
           </div>
         </div>
         <div class="flex items-center">
-          <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Hannah Morales" class="w-12 h-12 rounded-full border-2 border-white mr-3 shadow-md">
+          <img src="profil kosong2.jpg" alt="Hannah Morales" class="w-12 h-12 rounded-full border-2 border-white mr-3 shadow-md">
           <div>
             <p class="font-semibold">Hannah</p>
             <p class="text-sm text-gray-200">Pasien MCU</p>
@@ -1609,7 +1609,7 @@ window.addEventListener('DOMContentLoaded', isiFormDariURL);
         <li><a href="Layanankami.html" class="hover:text-yellow-400 transition">Tentang Kami</a></li>
         <li><a href="radiologi.html" class="hover:text-yellow-400 transition">Layanan Kami</a></li>
         <li><a href="promo.html" class="hover:text-yellow-400 transition">Promo</a></li>
-        <li><a href="https://wa.me/6282130471300" class="hover:text-yellow-400 transition">Hubungi Kami</a></li>
+        <li><a href="hubungikami.html" class="hover:text-yellow-400 transition">Contact</a></li>
       </ul>
     </div>
 
