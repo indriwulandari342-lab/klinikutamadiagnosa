@@ -133,31 +133,56 @@
         <img alt="Medicare logo" class="w-80 md:w-100 h-auto" src="navbar-removebg.png"/>
       </a>
 
-      <!-- Desktop Navbar -->
+       <!-- Desktop Navbar -->
       <nav>
         <ul class="hidden md:flex space-x-8 text-green-900 relative font-bold">
           <li><a class="hover:text-green-700 transition" href="index.html">Home</a></li>
           <li><a class="hover:text-green-700 transition" href="Layanankami.html">Tentang Kami</a></li>
           <li><a class="hover:text-green-700 transition" href="promo.html">Promo</a></li>
-          <li class="relative">
-            <button aria-haspopup="true" aria-expanded="false" id="services-btn" 
-              class="flex items-center space-x-1 hover:text-green-700 transition focus:outline-none font-bold">
-              <span>Pelayanan</span>
-              <i class="fas fa-chevron-down text-sm"></i>
-            </button>
-            <ul aria-label="submenu" 
-                class="absolute left-0 top-full mt-1 w-56 bg-green-200 border border-green-400 rounded-md shadow-lg opacity-0 invisible transition-all duration-300 z-50 origin-top scale-95">
-              <li><a class="block px-4 py-2 hover:bg-green-300 text-green-900 font-bold" href="#">Radiologi</a></li>
-              <li><a class="block px-4 py-2 hover:bg-green-300 text-green-900 font-bold" href="#">Electrocardiography [EKG]</a></li>
-              <li><a class="block px-4 py-2 hover:bg-green-300 text-green-900 font-bold" href="#">Ultrasonography [USG]</a></li>
-              <li><a class="block px-4 py-2 hover:bg-green-300 text-green-900 font-bold" href="#">Audiometri</a></li>
-              <li><a class="block px-4 py-2 hover:bg-green-300 text-green-900 font-bold" href="#">Spirometri</a></li>
-              <li><a class="block px-4 py-2 hover:bg-green-300 text-green-900 font-bold" href="#">Medical Check Up [MCU]</a></li>
-              <li><a class="block px-4 py-2 hover:bg-green-300 text-green-900 font-bold" href="#">Laboratorium Patalogi Klinik</a></li>
-              <li><a class="block px-4 py-2 hover:bg-green-300 text-green-900 font-bold" href="#">Laboratorium Patalogi Anatomi</a></li>
-              <li><a class="block px-4 py-2 hover:bg-green-300 text-green-900 font-bold" href="#">Treadmill</a></li>
-            </ul>
-          </li>
+          <!-- Dropdown -->
+    <li class="relative">
+  <button id="btn-pelayanan" 
+    class="flex items-center space-x-1 hover:text-green-700 transition focus:outline-none">
+    <span>Pelayanan</span>
+    <i class="fas fa-chevron-down text-sm transition-transform duration-300"></i>
+  </button>
+
+  <!-- Submenu kecil -->
+  <ul id="submenu-pelayanan"
+    class="absolute left-0 top-full mt-2 w-44 bg-green-200 border border-green-400 rounded-md shadow-lg opacity-0 invisible transition-all duration-300 z-[1000]">
+    
+    <li><a class="block px-3 py-2 hover:bg-green-300 text-green-900 font-semibold text-sm" href="radiologi.html">Radiologi</a></li>
+    <li><a class="block px-3 py-2 hover:bg-green-300 text-green-900 font-semibold text-sm" href="radiologi.html#ekg">Electrocardiography [EKG]</a></li>
+    <li><a class="block px-3 py-2 hover:bg-green-300 text-green-900 font-semibold text-sm" href="radiologi.html#usg">Ultrasonography [USG]</a></li>
+    <li><a class="block px-3 py-2 hover:bg-green-300 text-green-900 font-semibold text-sm" href="radiologi.html#audio">Audiometri</a></li>
+    <li><a class="block px-3 py-2 hover:bg-green-300 text-green-900 font-semibold text-sm" href="radiologi.html#spiro">Spirometri</a></li>
+    <li><a class="block px-3 py-2 hover:bg-green-300 text-green-900 font-semibold text-sm" href="radiologi.html#mcu">Medical Check Up [MCU]</a></li>
+    <li><a class="block px-3 py-2 hover:bg-green-300 text-green-900 font-semibold text-sm" href="radiologi.html#lab">Laboratorium Patalogi Klinik</a></li>
+    <li><a class="block px-3 py-2 hover:bg-green-300 text-green-900 font-semibold text-sm" href="radiologi.html#treadmill">Treadmill</a></li>
+  </ul>
+</li>
+<script>
+  const btn = document.getElementById("btn-pelayanan");
+  const submenu = document.getElementById("submenu-pelayanan");
+  const chevron = btn.querySelector("i");
+
+  btn.addEventListener("click", () => {
+    submenu.classList.toggle("opacity-0");
+    submenu.classList.toggle("invisible");
+
+    // Rotasi panah biar interaktif
+    chevron.classList.toggle("rotate-180");
+  });
+
+  // Biar klik di luar submenu nutup otomatis
+  document.addEventListener("click", (e) => {
+    if (!btn.contains(e.target) && !submenu.contains(e.target)) {
+      submenu.classList.add("opacity-0", "invisible");
+      chevron.classList.remove("rotate-180");
+    }
+  });
+</script>
+
           <li><a class="hover:text-green-700 transition" href="hubungikami.html">Contact</a></li>
         </ul>
       </nav>
@@ -185,18 +210,17 @@
           <ul aria-label="submenu" 
               class="hidden flex-col pl-6 mt-1 space-y-1 text-green-900 font-bold" 
               id="mobile-services-menu">
-            <li><a class="block hover:text-green-700 transition" href="#">Radiologi</a></li>
-            <li><a class="block hover:text-green-700 transition" href="#">Electrocardiography [EKG]</a></li>
-            <li><a class="block hover:text-green-700 transition" href="#">Ultrasonography [USG]</a></li>
-            <li><a class="block hover:text-green-700 transition" href="#">Audiometri</a></li>
-            <li><a class="block hover:text-green-700 transition" href="#">Spirometri</a></li>
-            <li><a class="block hover:text-green-700 transition" href="#">Medical Check Up [MCU]</a></li>
-            <li><a class="block hover:text-green-700 transition" href="#">Laboratorium Patalogi Klinik</a></li>
-            <li><a class="block hover:text-green-700 transition" href="#">Laboratorium Patalogi Anatomi</a></li>
-            <li><a class="block hover:text-green-700 transition" href="#">Treadmill</a></li>
+            <li><a class="block hover:text-green-700 transition" href="radiologi.html">Radiologi</a></li>
+            <li><a class="block hover:text-green-700 transition" href="radiologi.html#ekg">Electrocardiography [EKG]</a></li>
+            <li><a class="block hover:text-green-700 transition" href="radiologi.html#usg">Ultrasonography [USG]</a></li>
+            <li><a class="block hover:text-green-700 transition" href="radiologi.html#audio">Audiometri</a></li>
+            <li><a class="block hover:text-green-700 transition" href="radiologi.html#spiro">Spirometri</a></li>
+            <li><a class="block hover:text-green-700 transition" href="radiologi.html#mcu">Medical Check Up [MCU]</a></li>
+            <li><a class="block hover:text-green-700 transition" href="radiologi.html#lab">Laboratorium Patalogi Klinik</a></li>
+            <li><a class="block hover:text-green-700 transition" href="radiologi.html#treadmill">Treadmill</a></li>
           </ul>
         </li>
-        <li><a class="block hover:text-green-700 transition" href="hubungikami.html">contact</a></li>
+        <li><a class="block hover:text-green-700 transition" href="hubungikami.html">Contact</a></li>
       </ul>
     </div>
   </header>
